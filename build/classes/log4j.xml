@@ -11,7 +11,7 @@
 
 	<!-- Salida a un Archivo -->
 	<appender name="FILE" class="org.apache.log4j.FileAppender">
-		<param name="File" value="Fortimax.log" />
+		<param name="File" value="/logs/Fortimax.log" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="[%d] %-5p: %m%n" />
 		</layout>
@@ -19,7 +19,7 @@
 
 	<!-- Salida a un Archivo por fecha -->
 	<appender name="DAILYROLL" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="Fortimax.log" />
+		<param name="File" value="/logs/Fortimax.log" />
 		<param name="DatePattern" value="'.'yyyy-MM-dd " />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="[%d] %-5p: %m%n" />
@@ -28,7 +28,7 @@
 
 	<!-- Salida a un Archivo por tamano -->
 	<appender name="ROLL" class="org.apache.log4j.RollingFileAppender">
-		<param name="File" value="Fortimax.log" />
+		<param name="File" value="/logs/Fortimax.log" />
 		<param name="MaxFileSize" value="500KB" />
 		<param name="MaxBackupIndex" value="10" />
 		<layout class="org.apache.log4j.PatternLayout">
@@ -103,7 +103,7 @@
 	<root>
 		<priority value="ALL" /> <!-- Cambiar INFO para produccion -->
 		<appender-ref ref="DAILYROLL" /> <!-- Cambiar "Segun el caso" para produccion -->
-		<appender-ref ref="BD"/> <!-- Activa la bitacora (usuarios)!! Descomentar para produccion -->
+		<!-- <appender-ref ref="BD"/> Activa la bitacora (usuarios)!! Descomentar para produccion -->
 		<appender-ref ref="CONSOLE"/>
 	</root>
 </log4j:configuration> 

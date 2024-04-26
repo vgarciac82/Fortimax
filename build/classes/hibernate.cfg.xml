@@ -24,10 +24,18 @@
 
 		<!-- Utilizar org.hibernate.dialect.MySQLInnoDBDialect para MySQL 5.1.x o anteriores, commitear con esto-->
 		<!-- Utilizar org.hibernate.dialect.MySQL5InnoDBDialect para MySQL 5.5.x en adelante-->
-		<!-- Mysql configs -->
+		<!-- Mysql configs 
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.connection.url">jdbc:mysql://localhost/fortimax?autoReconnect=true</property>
+		-->
+		
+		
+		<!-- SQL Server configs -->
+		<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+		<property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<property name="hibernate.connection.url">jdbc:sqlserver://10.0.1.62;database=fortimax;autoReconnect=false</property>
+
 
 		<!-- Oracle configs -->
 		<!--<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>-->

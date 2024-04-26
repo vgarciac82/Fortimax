@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 import javax.servlet.ServletOutputStream;
+import javax.servlet.WriteListener;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
@@ -68,4 +69,16 @@ private static final Logger log = Logger.getLogger(CacheResponseStream.class);
   public void reset() {
     //noop
   }
+
+@Override
+public boolean isReady() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public void setWriteListener(WriteListener arg0) {
+	// TODO Auto-generated method stub
+	
+}
 }
