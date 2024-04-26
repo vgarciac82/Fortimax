@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+.btnFlipHor{
+	background-image:url(../imagenes/iconos/flipHor.png);
+}
+.btnFlipVer{
+	background-image:url(../imagenes/iconos/flipVer.png);
+}
+.btnScan{
+	background-image:url(../imagenes/iconos/scan.png);
+}
+.btnRemove{
+	background-image:url(../imagenes/iconos/remove.png);
+}
+.btnRotateLeft{
+	background-image:url(../imagenes/iconos/rotateL.png);
+}
+.btnRotateRight{
+	background-image:url(../imagenes/iconos/rotateR.png);
+}
+.btnSend{
+	background-image:url(../imagenes/iconos/send.png);
+}

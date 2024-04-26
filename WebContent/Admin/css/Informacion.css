@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+.x-column-header-inner .x-column-header-text {
+      font-weight: bold !important;
+      font-size:11px;
+}
+
+.x-column-header-inner {
+ line-height:30px;
+}
+.x-grid-cell-inner {
+   line-height:18px;
+ }
+.x-grid-row .x-grid-cell-inner {
+    font-size:11.5px;
+}
+.x-grid-row-alt .x-grid-cell,.x-grid-row-alt .x-grid-rowwrap-div{background-color:#ebf3ff}
+.x-grid-row-over .x-grid-cell,.x-grid-row-over .x-grid-rowwrap-div{border-color:#dddddd;background-color:#c1daff}

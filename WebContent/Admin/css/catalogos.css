@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+.panDatos{background:url('../imagenes/bg_45g.png');background-repeat:repeat;}
+.panNombre{background:url('../imagenes/bg_45g.png');background-repeat:repeat;}
+.guardar {
+    background-image: url(../imagenes/iconos/cierto.png) !important;
+    background-size:16px 16px;
+}
+.cancel {
+    background-image: url(../imagenes/iconos/cancel.png) !important;
+}
+.add {
+    background-image: url(../imagenes/iconos/add.gif) !important;
+}

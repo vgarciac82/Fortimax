@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fortimax:configuration >
+<Config>
+	<General>
+		<Log></Log>
+		<CofigsPaths>/</CofigsPaths>
+		<Log4jPath>/</Log4jPath>
+		<HibernatePath>/</HibernatePath>
+		<Config></Config>
+		<WorkPath></WorkPath>
+		<ActiveDirectoryConfigs></ActiveDirectoryConfigs>
+		<Separator></Separator>
+		<UrlFortimax>http://localhost:8080/Fortimax/</UrlFortimax>
+		<LuceneIndex>/fortimax/Volumens/_Index</LuceneIndex>
+		<DeleteFromVolumen>true</DeleteFromVolumen>
+		<Rpm></Rpm>
+		<FitImage>false</FitImage>
+		<VersionFortimax></VersionFortimax>
+		<RevisionFortimax></RevisionFortimax>
+		<WSDocumentCreateVersions></WSDocumentCreateVersions>
+		<AllowRightClic>true</AllowRightClic>
+		<WSAttributeSeparator>|</WSAttributeSeparator>
+	</General>
+
+	<WebServices workdir="/fortimax/TMPWS" urlFortimax="http://localhost:8080/Fortimax/">
+		<DocumentService>
+			<AllowVersions>false</AllowVersions>
+		</DocumentService>
+	</WebServices>
+
+	<!-- Variables Procesamiento OCR VGC La configuracion de Tesseract se define
+		en el XML. -->
+	<OCR activarOCR="false">
+		<LangOption>-l</LangOption>
+		<Lang>spa</Lang>
+		<!-- La ruta debe terminar con / o bien ser vacia cuando el comando tesseract
+			esta en el path del SO -->
+		<TessPath>/tesseract3/</TessPath>
+		<PrefixOCR>FMX_OCR_</PrefixOCR>
+		<FileExtensionOCR>.txt</FileExtensionOCR>
+		<BorrarImgTempOCR>true</BorrarImgTempOCR>
+		<Start></Start>
+		<End></End>
+		<CantRegProc></CantRegProc>
+		<ConvertToGray></ConvertToGray>
+	</OCR>
+   
+	<!-- Variables de entorno -->
+	<VariablesEntorno>
+		<fortimax.login.password.intentos categoria="Seguridad" descripcion="Numero de intentos antes de desactivarse. Valor numerico.">5</fortimax.login.password.intentos>
+		<fortimax.login.password.caducidad categoria="Seguridad" descripcion="Numero de dias de vigencia. Valor numerico.">90</fortimax.login.password.caducidad>
+		<fortimax.login.password.maxlongitud categoria="Seguridad" descripcion="Numero maximo de caracteres. Valor numerico.">16</fortimax.login.password.maxlongitud>
+		<fortimax.login.password.minlongitud categoria="Seguridad" descripcion="Numero minimo de caracteres. Valor numerico.">8</fortimax.login.password.minlongitud>
+		<fortimax.login.password.minmayusculas categoria="Seguridad" descripcion="Numero minimo de mayusculas. Valor numerico.">0</fortimax.login.password.minmayusculas>
+		<fortimax.login.password.maxmayusculas categoria="Seguridad" descripcion="Numero máximo de mayusculas. Valor numerico.">16</fortimax.login.password.maxmayusculas>
+		<fortimax.login.password.mindigitos categoria="Seguridad" descripcion="Numero minimo de digitos. Valor numerico.">0</fortimax.login.password.mindigitos>
+		<fortimax.login.password.maxdigitos categoria="Seguridad" descripcion="Numero maximo de digitos. Valor numerico.">16</fortimax.login.password.maxdigitos>
+		<fortimax.login.password.regex categoria="Seguridad" descripcion="Expresion regular que define formato.">^(?=\w{0,16}\b)(?=([0-9a-z_\-\.]*[A-Z][0-9a-z_\-\.]*){0,16}\b)(?=([A-Za-z_\-\.]*[0-9][A-Za-z_\-\.]*){0,16}\b)\w*$</fortimax.login.password.regex>
+	</VariablesEntorno>
+
+	<!-- true: Escala la imagen en el visualizador de imagenes false: Muestra
+		la imagen en tamao real -->
+	<FitImage>false</FitImage>
+
+	<!-- Puerto del servidor LDAP port="1389" IP del servidor LDAP host="127.0.0.1"
+		Usuario y password con permisos de ver TODOS los grupos LDAP user="" psswd=""
+		Dominio de configuracion del LDAP (Exclusivo de MS ActiveDirectory) dominio=""
+		Grupos con acceso a Fortimax usersOU="" groupsOU="" -->
+
+	<!-- <ActiveDirectory port="" host="" user="" psswd="" dominio="" usersOU=""
+		groupsOU=""> </ActiveDirectory> -->
+
+	<!-- Ruta de creacion de los reportes Reportes="/path/to/store/reports/"
+		La siguiente seccion Companies siempre debe existir, tienen un elemenbto
+		por cada razon social configurada (RFC) Se agrega un tag nuevo por cada razon
+		social. Se agrega siguiendo la siguiente nomenclatura: <RFC display="Display
+		en Fortimax" /> Ejemplo <Companies> <ATO911125I32 display="Toreo" /> <FAU9806152V7
+		display="Fundadores" /> </Companies> -->
+	<!-- <Menu> <ReporteMensual Reportes=""> <Companies> </Companies> </ReporteMensual>
+		</Menu> -->
+	<!-- Activa la funcionalidad Drag and Drop en el applet de escaneo -->
+	<activeDND>true</activeDND>
+
+	<Token expires="30"></Token>
+	<!-- Usuario y Contraseña de Administrador Generico -->
+	<!-- Usuario: fortimax  Password: fortimax MD5 -->
+	<usuario>
+	<usr>48d41d4248a7015f8664b2e02630d087</usr>
+	<password>48d41d4248a7015f8664b2e02630d087</password>
+	</usuario>
+	<versiones>
+	<fortimax>
+	<name>Version Fortimax</name>
+	<version>4.1</version>
+	</fortimax>
+	<svn>	
+	<name>Revision SVN</name>
+	<version>1981</version>	
+	</svn>
+	<tesseract>
+	<name>Tesseract</name>
+	<version>3.0</version>
+	</tesseract>
+	<lucene>
+	<name>Lucene</name>
+	<version>3.0</version>
+	</lucene>
+	<hibernate>
+	<name>Hibernate</name>
+	<version>3.0</version>
+	</hibernate>
+	</versiones>
+	<!-- Rutas a Freamwork Extjs -->
+	<ExtjsAdmin>
+	    <ext>../../js/Extjs4/ext-all.js</ext>
+	    <css>../../resources/css/ext-all.css</css>
+	    <locale>../../js/Extjs4/locale/ext-lang-es.js</locale>
+	    <ux>../../js/Extjs4/ux/</ux>
+	</ExtjsAdmin>
+	<ExtjsF>
+	    <ext>../js/Extjs4/ext-all.js</ext>
+	    <css>../resources/css/ext-all.css</css>
+	    <locale>../js/Extjs4/locale/ext-lang-es.js</locale>
+	    <ux>../js/Extjs4/ux/</ux>
+	</ExtjsF>
+	<Visualizador>
+	    <version>auto</version>
+	</Visualizador>
+</Config>

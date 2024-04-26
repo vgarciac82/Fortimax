@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+.ventanaIcon{background-image:url(../imagenes/iconos/share.gif)}
+.textoEncabezado{
+	color:#242424;
+	font-size: 12px;
+	font-style: oblique;
+	font-weight: bolder;
+	margin-left:15;
+}
+.rojo{
+	font-weight: bolder;
+	color:red;
+}
+.verde{
+	font-weight: bolder;
+	color:green;
+}
+.textoCuerpo{
+	color:#242424;
+	font-size: 12px;
+}
+.FieldtextoEstatus{
+	border:none;
+	text-align:right;
+}
+.fieldSets{
+	border:none;
+}
+.areaLigaTexto{
+	color:#000099;
+	font-size: 11px;
+	font-weight: bolder;
+}
+.btnGuardar{
+	background-image:url(../imagenes/iconos/save24.png);
+}
+.btnOn{
+	background-image:url(../imagenes/iconos/On.png);
+}
+.btnOff{
+	background-image:url(../imagenes/iconos/Off.png);
+}
+.btnCopiarIcon{
+	background-image:url(../imagenes/iconos/copiar.png);
+}
+.resaltar{
+	font-weight: bolder;
+}
+.fieldSetsbtnCopiar{
+	border:none;
+	text-align:right;
+}
+.areaLigaTextoCls{
+	margin-right:10px;
+}
+.fieldSetExpira{
+	margin-left:10px;
+	margin-right:10px;
+}
+.fieldSetsbtnGuardar{
+	border:none;
+	margin-left:100px;
+}

@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+.fieldSetImpresorasCls{
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:5px;
+}
+
+.btnPreferenciasCls{
+	margin-top:10px;
+}
+.fieldSetHCls{
+	border:none;
+}
+.lblPaginasCls{
+	color: #000;
+	font-size:10px;
+}
+.fieldSetConfiguracionCls{
+	margin-left:30px;
+}
+.radOrientacionCls{
+	margin-top:10px;
+}
+.txtCopiasCls{
+	margin-top:10px;
+}
+.comboHojasCls{
+	margin-top:10px;
+}
+.btnImprimirCls{
+	margin-left:300px;
+}
+.btnCancelarCls{
+	margin-left:10px;
+}
+.btnCancelarIconCls{
+	background-image:url(../imagenes/iconos/eliminar24.png);
+}
+.btnImprimirIconCls{
+	background-image:url(../imagenes/iconos/imprimir.png);
+}
+.btnPreferenciasIconCls{
+	background-image:url(../imagenes/iconos/config16.png);
+}
+.lblMsjFormatoCls, .lblMsjCalidadCls, .lblStatusCls{
+	color: #000;
+	font-size:10px;
+}
+.fieldSetCGICls{
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:5px;
+}
+.btnGuardarPreferenciasIconCls{
+	background-image:url(../imagenes/iconos/save16.png);
+}
+.btnCancelarPreferenciasIconCls{
+	background-image:url(../imagenes/iconos/falso.png);
+}

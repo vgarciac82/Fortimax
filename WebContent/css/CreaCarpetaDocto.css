@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+.fieldSetCentrarCls{
+	margin-top:10px;
+	margin-left:10px;
+	margin-right:10px;
+}
+.fieldSetPanelCls{
+	border:none;
+}
+.dateP{
+	margin-top:10px;
+	margin-left:120px;
+}
+
+.red{
+	color:#f00;
+	font-size:14px;
+}
+.instrucciones {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #33cc00;
+	font-weight: bold;
+}
+.labels{
+	color: #000;
+	font-size:15px;
+}
+.btnGuardar{
+	background-image:url(../imagenes/save.png);
+	
+}
+.lblMsj{
+	font-size:11px;
+	margin-top:5px;
+}
+/*
+.x-panel-header-text-default,
+.x-panel-header-text-default-framed {
+    font-size: 13px;
+    color: #fff;
+}*/
+.boton{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	/*background:#004694;*/
+}
+
+.panPrincipal{
+	border-style:solid;
+	border-width:5px;
+	/*border-color:#014695;*/
+	border-top:none;
+	
+}
+.textoForm{
+	color:#242424;
+	font-size: 12px;
+	font-weight: bolder;
+}
+/*
+.x-panel-header { 
+	background:#244480;
+	
+background-image: linear-gradient(bottom, rgb(1,70,149) 19%, rgb(11,110,176) 60%);
+background-image: -o-linear-gradient(bottom, rgb(1,70,149) 19%, rgb(11,110,176) 60%);
+background-image: -moz-linear-gradient(bottom, rgb(1,70,149) 19%, rgb(11,110,176) 60%);
+background-image: -webkit-linear-gradient(bottom, rgb(1,70,149) 19%, rgb(11,110,176) 60%);
+background-image: -ms-linear-gradient(bottom, rgb(1,70,149) 19%, rgb(11,110,176) 60%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.19, rgb(1,70,149)),
+	color-stop(0.6, rgb(11,110,176))
+);
+        } */

@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+.save {
+    background-image: url(../imagenes/disk.png) !important;
+}
+.export {
+    background-image: url(../imagenes/export.png) !important;
+}
+.import {
+    background-image: url(../imagenes/iconos/import.png) !important;
+}
+.addC {
+   width:16px;	
+    background-image: url(../imagenes/iconos/folder-nuevo.png) !important;
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+.addD {
+    width:16px;	
+    background-image: url(../imagenes/iconos/documento-nuevo.png) !important;
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+.del {
+    background-image: url(../resources/icons/fam/delete.gif) !important;
+}
+.documento{
+	width:16px;	
+    background-image: url(../imagenes/iconos/documento.png) !important;
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+.carpetaIcon{
+
+    background-image: url(../imagenes/iconos/folder.png) !important;
+    background-repeat:no-repeat;
+
+}
+#grdArbol .carpeta .x-grid-cell-inner {
+    font-size: 1.4em;
+}
+#grdArbol .documentoCls .x-grid-cell-inner{
+	 font-size: 1.3em;
+}
+font.bold{
+	font-weight:bold;
+	
+}
+.fieldSetActivoModificableCls{
+	border:none;
+}
+.fieldSetExtrasCls{
+	margin-left:5px;
+	margin-right:5px;
+	margin-top:5px;
+	margin-bottom:5px;
+}

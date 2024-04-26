@@ -1,0 +1,114 @@
+BODY {
+	BACKGROUND-COLOR: #ffffff; MARGIN: 0px
+}
+#contenido {
+	COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 13px; PADDING-RIGHT: 3px; TEXT-ALIGN: justify; TEXT-INDENT: 15px
+}
+#contenido2 {
+	BACKGROUND-COLOR: #ffffff; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 13px; TEXT-ALIGN: justify; VERTICAL-ALIGN: top
+}
+#contenido3 {
+	BACKGROUND-COLOR: #ffffff; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px
+}
+#productos {
+	BACKGROUND-IMAGE: url(../imagenes/interfaz_01.gif); BACKGROUND-REPEAT: no-repeat; VERTICAL-ALIGN: top
+}
+#pie {
+	BACKGROUND-COLOR: #b0cbe4; COLOR: #333333; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+#menu1 {
+	COLOR: #003366; FONT-FAMILY: Tahoma, sans-serif; FONT-SIZE: 11px; LETTER-SPACING: 1px; TEXT-DECORATION: none
+}
+#menu1 A:link {
+	COLOR: #003366; FONT-FAMILY: Tahoma, sans-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+#menu1 A:visited {
+	COLOR: #003366; FONT-FAMILY: Tahoma, sans-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+#menu1 A:hover {
+	BACKGROUND-COLOR: #666666; COLOR: #ffffff; FONT-FAMILY: Tahoma, sans-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+#miembros {
+	COLOR: #333333; FONT-FAMILY: Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; LETTER-SPACING: 1px
+}
+#menu2 {
+	BACKGROUND-IMAGE: url(../imagenes/interfaz_08.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 28px; PADDING-LEFT: 3px
+}
+#menu2 A:link {
+	COLOR: #000066; FONT-FAMILY: Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 13px; TEXT-DECORATION: none
+}
+#menu2 A:hover {
+	BACKGROUND-COLOR: #cddeee; COLOR: #000066; FONT-FAMILY: Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 13px; PADDING-RIGHT: 3px; TEXT-DECORATION: none
+}
+#menu2 A:visited {
+	COLOR: #000066; FONT-FAMILY: Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 13px; TEXT-DECORATION: none
+}
+#miembros A:hover {
+	TEXT-DECORATION: none
+}
+#pie A:link {
+	BORDER-BOTTOM: 1px solid; BORDER-LEFT: 1px solid; BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; COLOR: #ffffff
+}
+#pie A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#pie A:visited {
+	COLOR: #ffffff
+}
+.texto {
+	COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; TEXT-ALIGN: justify; TEXT-INDENT: 15px; VERTICAL-ALIGN: top
+}
+.texto1 {
+	COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px
+}
+.texto3 {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-ALIGN: right
+}
+.texto4 {
+	COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-RIGHT: 8px; TEXT-ALIGN: right
+}
+.boton {
+	BACKGROUND-COLOR: #366ea4; BORDER-BOTTOM: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; COLOR: #ffffff; FONT-SIZE: 10px; FONT-WEIGHT: bold
+}
+.campos {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #000066 1px solid; BORDER-LEFT: #000066 1px solid; BORDER-RIGHT: #000066 1px solid; BORDER-TOP: #000066 1px solid; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px
+}
+.titulo1 {
+	COLOR: #006600; FONT-FAMILY: Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 16px; FONT-WEIGHT: 800; LETTER-SPACING: 2px; PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 4px
+}
+.texto2 {
+	COLOR: #888888; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; FONT-WEIGHT: normal; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; VERTICAL-ALIGN: top
+}
+.idioma {
+	BACKGROUND-COLOR: #dee7f0; COLOR: #003366; FONT-FAMILY: Tahoma, sans-serif; FONT-SIZE: 11px; LINE-HEIGHT: 10px; MARGIN: 0px
+}
+.titulo2 {
+	BACKGROUND-IMAGE: url(../imagenes/interfaz_f2.gif); BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 13px; FONT-WEIGHT: bold; HEIGHT: 35px; LINE-HEIGHT: normal
+}
+.titulo3 {
+	BACKGROUND-IMAGE: url(../imagenes/interfaz_f1.gif); BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold; HEIGHT: 35px; LETTER-SPACING: 3px; LINE-HEIGHT: normal; VERTICAL-ALIGN: middle
+}
+.textoPromocion {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-ALIGN: justify
+}
+.famarillo {
+	BACKGROUND-IMAGE: url(../imagenes/interfaz_03.gif); BACKGROUND-REPEAT: repeat-y; VERTICAL-ALIGN: top
+}
+.fazul {
+	BACKGROUND-IMAGE: url(../imagenes/interfaz_06.gif); BACKGROUND-REPEAT: repeat-y
+}
+.bordes {
+	BORDER-BOTTOM: #446097 1px solid; BORDER-LEFT: #446097 1px solid; BORDER-RIGHT: #446097 1px solid; BORDER-TOP: #446097 1px solid
+}
+.fondoc1 {
+	BACKGROUND-COLOR: #cae3f8
+}
+.titulomayus {
+	FONT-WEIGHT: bold; TEXT-TRANSFORM: uppercase
+}
+#legal {
+	COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; TEXT-ALIGN: justify
+}
+.contenido {
+	COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 13px; PADDING-RIGHT: 3px; TEXT-ALIGN: justify; TEXT-INDENT: 15px
+}

@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+.numero .x-grid-cell-inner{
+	background-color:#fff;
+	font-weight:bold;
+}
+
+.numeroF{
+	font-weight:bold;
+}
+.numeroFilas{
+	font-size:12px;
+	font-style:italic;
+}
+
+.labelEncabezado{
+	font-weight:bold
+}
+.actionColumns {
+    cursor: pointer;
+}
+.x-grid-row-over .x-grid-cell-inner {
+    font-weight: bold;
+}
+.BtnCrear {
+    background-image:url(../resources/icons/fam/add.png);
+}

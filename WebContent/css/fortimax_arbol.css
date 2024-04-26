@@ -1,0 +1,32 @@
+body {
+	color: #333399;
+	font-family: verdana;
+	font-size: 12 px;
+	margin: 0px;
+	background-image: url(../imagenes/interfaz/i_fondo_contenido.gif);
+	background-repeat: repeat-x;
+}
+
+a:link, a:visited {
+	font-family: verdana;
+	font-size: 12 px;
+	text-decoration: none;
+	color: black;
+}
+
+i {
+	font-family: verdana;
+	font-size: 12 px;
+	font-weight: bolder;
+}
+
+a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #335EA8;
+}
+
+a:hover {
+	color: #333399;
+	text-decoration: underline;
+}

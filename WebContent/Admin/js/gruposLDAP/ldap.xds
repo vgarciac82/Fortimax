@@ -1,0 +1,292 @@
+{
+	"name": "ldap.xds",
+	"projectId": "848F22BE-58E5-4098-AF48-FB1C59069B42",
+	"settings": {
+		"urlPrefix": "http://localhost/",
+		"spacesToIndent": 4,
+		"codeGenFormat": "Class",
+		"extPath": "http://extjs.cachefly.net/ext-3.2.1/",
+		"exportPath": ".",
+		"lineEnding": "CRLF",
+		"instantiateStore": true,
+		"exportXDSFiles": true,
+		"genTimestamps": true
+	},
+	"xdsVersion": "xds-1.0.3.2",
+	"components": [
+		{
+			"id": "MyViewport",
+			"cid": "viewport",
+			"jsClass": "MyViewport",
+			"snapToGrid": 10,
+			"userConfig": {
+				"layout": "absolute"
+			},
+			"cn": [
+				{
+					"id": "MyPanel",
+					"cid": "panel",
+					"jsClass": "MyPanel",
+					"snapToGrid": 10,
+					"userConfig": {
+						"title": "Privilegios del Grupo",
+						"width": 632,
+						"height": 317,
+						"layout": "absolute",
+						"x": 20,
+						"y": 20
+					},
+					"cn": [
+						{
+							"id": "MyLabel",
+							"cid": "label",
+							"jsClass": "MyLabel",
+							"snapToGrid": 10,
+							"userConfig": {
+								"text": "Grupo de LDAP:",
+								"x": 10,
+								"y": 0
+							}
+						},
+						{
+							"id": "MyCombo",
+							"cid": "combobox",
+							"jsClass": "MyCombo",
+							"snapToGrid": 10,
+							"userConfig": {
+								"title": "Grupos de LDAP",
+								"store": "jsonStoreGrupos",
+								"selectOnFocus": "-ext-undefined-",
+								"blankText": "-ext-undefined-",
+								"triggerAction": "all",
+								"emptyText": "Escoja un grupo de LDAP...",
+								"editable": false,
+								"x": 130,
+								"y": 0,
+								"width": 400
+							}
+						},
+						{
+							"id": "MyPanel3",
+							"cid": "panel",
+							"jsClass": "MyPanel1",
+							"snapToGrid": 10,
+							"userConfig": {
+								"title": "Propiedades",
+								"layout": "-ext-undefined-",
+								"width": 102,
+								"height": 160,
+								"x": 520,
+								"y": 50
+							},
+							"cn": [
+								{
+									"id": "MyCheckbox",
+									"cid": "checkbox",
+									"jsClass": "MyCheckbox",
+									"snapToGrid": 10,
+									"userConfig": {
+										"boxLabel": "Eliminar"
+									}
+								},
+								{
+									"id": "MyCheckbox1",
+									"cid": "checkbox",
+									"jsClass": "MyCheckbox1",
+									"snapToGrid": 10,
+									"userConfig": {
+										"boxLabel": "Modificar"
+									}
+								},
+								{
+									"id": "MyCheckbox2",
+									"cid": "checkbox",
+									"jsClass": "MyCheckbox2",
+									"snapToGrid": 10,
+									"userConfig": {
+										"boxLabel": "Crear"
+									}
+								},
+								{
+									"id": "MyCheckbox3",
+									"cid": "checkbox",
+									"jsClass": "MyCheckbox3",
+									"snapToGrid": 10,
+									"userConfig": {
+										"boxLabel": "Imprimir"
+									}
+								},
+								{
+									"id": "MyCheckbox4",
+									"cid": "checkbox",
+									"jsClass": "MyCheckbox4",
+									"snapToGrid": 10,
+									"userConfig": {
+										"boxLabel": "Compartir"
+									}
+								},
+								{
+									"id": "MyCheckbox5",
+									"cid": "checkbox",
+									"jsClass": "MyCheckbox5",
+									"snapToGrid": 10,
+									"userConfig": {
+										"boxLabel": "Digitalizar"
+									}
+								},
+								{
+									"id": "MyCheckbox6",
+									"cid": "checkbox",
+									"jsClass": "MyCheckbox6",
+									"snapToGrid": 10,
+									"userConfig": {
+										"boxLabel": "Descargar"
+									}
+								}
+							]
+						},
+						{
+							"id": "MyButton",
+							"cid": "button",
+							"jsClass": "MyButton",
+							"snapToGrid": 10,
+							"userConfig": {
+								"text": "Asignar >>",
+								"x": 220,
+								"y": 120,
+								"width": 80
+							}
+						},
+						{
+							"id": "MyButton1",
+							"cid": "button",
+							"jsClass": "MyButton1",
+							"snapToGrid": 10,
+							"userConfig": {
+								"text": "<< Desasignar",
+								"x": 220,
+								"y": 160,
+								"width": 80
+							}
+						},
+						{
+							"id": "MyButton2",
+							"cid": "button",
+							"jsClass": "MyButton2",
+							"snapToGrid": 10,
+							"userConfig": {
+								"text": "Actualizar Privilegios",
+								"x": 200,
+								"y": 260,
+								"width": 120
+							}
+						}
+					]
+				},
+				{
+					"id": "MyGrid",
+					"cid": "grid",
+					"jsClass": "MyGrid",
+					"snapToGrid": 10,
+					"userConfig": {
+						"title": "Gavetas no Asignadas",
+						"store": "Ext.StoreMgr.lookup('gavetasNoAsignadasStore')",
+						"x": 30,
+						"y": 90,
+						"height": 200,
+						"width": 200,
+						"hideHeaders": true,
+						"border": "-ext-undefined-"
+					},
+					"cn": [
+						{
+							"id": "MyColumn2",
+							"cid": "gridcolumn",
+							"jsClass": "MyColumn2",
+							"snapToGrid": 10,
+							"userConfig": {
+								"dataIndex": "name",
+								"header": "-ext-undefined-",
+								"sortable": "-ext-undefined-",
+								"resizable": false,
+								"width": 196,
+								"editable": false,
+								"fixed": "-ext-undefined-"
+							}
+						}
+					]
+				},
+				{
+					"id": "MyGrid1",
+					"cid": "grid",
+					"jsClass": "MyGrid",
+					"snapToGrid": 10,
+					"userConfig": {
+						"title": "Gavetas Asignadas",
+						"store": "Ext.StoreMgr.lookup('gavetasAsignadasStore')",
+						"x": 330,
+						"y": 90,
+						"height": 200,
+						"width": 200,
+						"hideHeaders": true,
+						"border": "-ext-undefined-"
+					},
+					"cn": [
+						{
+							"id": "MyColumn",
+							"cid": "gridcolumn",
+							"jsClass": "MyColumn2",
+							"snapToGrid": 10,
+							"userConfig": {
+								"dataIndex": "name",
+								"header": "-ext-undefined-",
+								"sortable": "-ext-undefined-",
+								"resizable": false,
+								"width": 196,
+								"editable": false,
+								"fixed": "-ext-undefined-"
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"stores": [
+		{
+			"id": "MyStore",
+			"cid": "jsonstore",
+			"jsClass": "gruposLDAPStore",
+			"snapToGrid": 10,
+			"userConfig": {
+				"storeId": "gruposLDAPStore",
+				"url": "http://localhost:8080/Fortimax/Admin/LDAPServlet?action=obtenerGrupos",
+				"root": "grupos",
+				"autoLoad": true,
+				"idProperty": "-ext-undefined-"
+			}
+		},
+		{
+			"id": "MyStore1",
+			"cid": "jsonstore",
+			"jsClass": "gavetasNoAsignadasStore",
+			"snapToGrid": 10,
+			"userConfig": {
+				"storeId": "gavetasNoAsignadasStore",
+				"url": "http://localhost:8080/Fortimax/Admin/LDAPServlet?action=obtenerGavetasNoAsignadas",
+				"root": "gavetasNoAsignadas"
+			}
+		},
+		{
+			"id": "MyStore2",
+			"cid": "jsonstore",
+			"jsClass": "gavetasAsignadasStore",
+			"snapToGrid": 10,
+			"userConfig": {
+				"url": "http://localhost:8080/Fortimax/Admin/LDAPServlet?action=obtenerGavetasAsignadas",
+				"root": "gavetasAsignadas",
+				"storeId": "gavetasAsignadasStore"
+			}
+		}
+	]
+}

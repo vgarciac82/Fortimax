@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+.panelDigitalizarCls{
+	border:none;
+}
+.fieldSetTxtCls{
+	text-align:center;
+	border:none;
+}
+.panelPrincipalCls{
+	margin:0 auto;
+	margin-top:50px;
+}
+.subirArchivoCls, .txtNombreCls, .txtDescripcionCls{
+	margin-top:15px;
+	margin-left:35px;
+}
+
+.fontTitulo{
+	color:#232323;
+	font-weight: bold;
+	font-size:12px;
+}
+.fontTexto{
+	color:#3c3c3c;
+	font-size:13px;
+}
+.fieldSetCls{
+	margin-top:10px;
+	margin-left:15px;
+	margin-right:10px;
+	margin-bottom:15px;
+	border:none;
+}
+.btnRespaldarArchivoIconCls{
+	background-image:url(../imagenes/iconos/import24.png);
+}
+.btnDigitalizarIconCls{
+	background-image:url(../imagenes/iconos/importar.png);
+}
+.btnDigitalizarCls{
+	margin-top:15px;
+}
+.btnRespaldarArchivoCls{
+	margin-top:15px;
+}
+.btnSubirArchivoIconCls{
+	background-image:url(../imagenes/iconos/flechaArriba16.png);
+}
+.btnSubirVariosIconCls{
+	background-image:url(../imagenes/iconos/flechaArriba16.png);
+}

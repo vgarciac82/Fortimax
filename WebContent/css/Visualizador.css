@@ -1,0 +1,294 @@
+@CHARSET "UTF-8";
+#miniaturas {
+    background-color: #fff;
+    text-shadow: #fff 0 1px 0;
+    position: relative;
+    display: block;
+    height: auto;
+}
+
+#miniaturas div.miniatura img {
+    margin-bottom: 1px;
+}
+
+#miniaturas div.miniatura {
+    float: left;
+    padding: 8px 17px;
+    margin: 5px;
+/*    margin: 10px 0 0 25px;*/
+    text-align: center;
+    line-height: 14px;
+    color: #333;
+    font-size: 10px;
+    font-family: "Helvetica Neue",sans-serif;
+    height: 98px;
+    width: 90px;
+    overflow: hidden;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+.x-ie6 #miniaturas div.miniatura,
+.x-ie7 #miniaturas div.miniatura,
+.x-ie8 #miniaturas div.miniatura {
+    border-top: none;
+    padding: 3px 2px;
+    margin: 2px;
+}
+
+#miniaturas div.miniatura-hover {
+    background-color: #eee;
+}
+
+#miniaturas .x-item-selected {
+    background-color: #D3E1F1 !important;
+}
+
+#miniaturas div.miniatura strong {
+    color: #000;
+    display: block;
+}
+
+#miniaturas div.miniatura span {
+    color: #999;
+}
+
+
+
+.btnSiguienteMiniaturas{
+	background-image:url(../imagenes/iconos/flechaAbajo16.png);
+}
+
+.textoTabs{
+	font-size:11px;
+}
+.btnEscanearIcon{
+	background-image:url(../imagenes/iconos/escanear.png);
+}
+.btnAgregarImagenIcon{
+	background-image:url(../imagenes/iconos/importar.png);
+}
+.btnImprimirIcon{
+	background-image:url(../imagenes/iconos/imprimir.png);
+}
+.btnZoomOutIcon{
+	background-image:url(../imagenes/iconos/zoom-out.gif);
+}
+.btnZoomInIcon{
+	background-image:url(../imagenes/iconos/zoom-in.gif);
+}
+.slideZoomLabelCls{
+	margin-left:10px;
+}
+.slideRotarLabelCls{
+	margin-left:10px;
+}
+.btnRotarDerechaIcon{
+	background-image:url(../imagenes/iconos/rotarDerecha.png);
+}
+.btnRotarIzquierdaIcon{
+	background-image:url(../imagenes/iconos/rotarIzquierda.png);
+}
+.btnAnteriorIcon{
+	background-image:url(../imagenes/iconos/anterior.png);
+}
+.btnSiguienteIcon{
+	background-image:url(../imagenes/iconos/siguiente.png);
+}
+.btnInicioIcon{
+	background-image:url(../imagenes/iconos/ir_primero.png);
+}
+.btnFinalIcon{
+	background-image:url(../imagenes/iconos/ir_ultimo.png);
+}
+.panImgCls{
+	cursor:pointer;
+}
+.btnAjustarIcon{
+	background-image:url(../imagenes/iconos/ajustar.png);
+}
+.btnAjustarAnchoIcon{
+	background-image:url(../imagenes/iconos/ajustarH.png);
+}
+.btnAjustarAltoIcon{
+	background-image:url(../imagenes/iconos/ajustarV.png);
+}
+.btnVersionNavegadorIcon{
+	background-image:url(../imagenes/iconos/eye24.png);
+}
+
+.btnEditar{
+	background-image:url(../imagenes/modificar.png);
+}
+.red{
+	color:#f00;
+	font-size:20px;
+}
+.btnGuardar{
+		background-image:url(../imagenes/save16.png);
+}
+.btnExportar{
+	background-image:url(../Admin/imagenes/iconos/export.png);
+}
+.LabelT{
+	color: #3104B4;
+	font-size:11px;
+	
+}
+.info{
+	color: #2E2E2E;
+	font-size:13px;
+	font-weight:bold;
+}
+.LabelTP{
+	color: #3104B4;
+	font-size:10px;
+	
+}
+.infoP{
+	color: #2E2E2E;
+	font-size:12px;
+	font-weight:bold;
+}
+.fieldS{
+	margin-top:10px;
+	margin-left:25px;
+	margin-right:25px;
+	margin-bottom:10px;
+}
+.gridDetallesCls{
+	margin-bottom:10px;
+}
+.trControles{
+	text-align:center;
+}
+.tdBoton{
+	margin-top:2px;
+	margin-left:3px;
+}
+.tableBotones{
+	margin-left:28px;
+}
+.tableBotonesL{
+	width:400px; 
+	height:auto;
+left: 50%;
+}
+.tdMenu{
+	margin-left:20%;
+}
+.fieldSet{
+	margin-top:15px;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+.textoForm{
+	color:#242424;
+	font-size: 12px;
+	font-weight: bolder;
+}
+.btnEliminarPaginaIcon{
+	background-image:url(../imagenes/iconos/eliminar24.png)
+}
+.btnGuardarOCRIcon{
+	background-image:url(../imagenes/save16.png);
+}
+.numero .x-grid-cell-inner{
+	background-color:#fff;
+	font-weight:bold;
+}
+.toolbarVisorCls{
+	border:none;
+}
+.fieldSetAtributoCls{
+	border:none;
+	margin-top:5px;
+}
+.fieldSetAtributosCls{
+	margin-top:15px;
+	margin-left:25px;
+	margin-right:25px;
+}
+.campoAtributosCls{
+	margin-right:20px;
+}
+.checkAtributosCls{
+	margin-right:10px;
+}
+.disabledCls .x-item-disabled {
+    color: #000 !important;
+    -moz-opacity: 100;
+    opacity: 1;
+}
+.btnGuardarAtributosIconCls{
+	background-image:url(../imagenes/iconos/save24.png);
+}
+.btnGuardarAtributosCls{
+	margin-bottom:5px;
+}
+.fieldSetHistoricoCls{
+	margin-left:25px;
+	margin-right:25px;	
+}
+.grdHistorico{
+	margin-bottom:5px;
+}
+.pdfIconCls{
+	background-image:url(../imagenes/iconos/pdf.png);
+}
+.zipIconCls{
+	background-image:url(../imagenes/iconos/zip16.png);
+}
+.btnRefrescarArbolIconCls{
+	background-image:url(../imagenes/iconos/refresh16.png);
+}	
+
+/*
+Inicia seccion de Ventana Agregar Imagen
+*/
+@CHARSET "UTF-8";
+.btnSubirArchivoIconCls{
+	background-image:url(../imagenes/iconos/flechaArriba16.png);
+}
+.subirCls{
+	margin-left:20px;
+	margin-top:15px;
+}
+.formsCls{
+	border:none;
+}
+
+.progressBarsCls{
+	margin-left:20px;
+	margin-top:22px;
+}
+.imgEstados{
+	margin-left:5px;
+	margin-top:15px;
+}
+.btnEliminarIconCls{
+	background-image:url(../imagenes/iconos/falso.png);
+}
+.btnEliminarCls{
+	margin-left:5px;
+	margin-top:15px;
+}
+.btnEnviarFotosIconCls{
+	background-image:url(../imagenes/iconos/import24.png);
+}
+.btnAgregarFilaIconCls{
+	background-image:url(../imagenes/iconos/flechaAbajo16.png);
+}
+.totalNumero{
+	color:#232323;
+	font-weight: bold;
+	font-size:13px;
+}
+.totalTexto{
+	color:#3c3c3c;
+}
+.subirCls .x-mask
+{
+    background-color: transparent;
+}

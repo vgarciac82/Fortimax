@@ -1,0 +1,31 @@
+{"expedientes": {
+		"text": "hola", 
+        "expanded": false,
+        "children": [
+            { "text": "Expediente01x", "leaf": false, "expanded": true,
+            "expediente": true,
+            "id": "EXP1_20160209",
+            "children": [
+                { "text": "carpeta0101", "leaf": false, "expanded": true, "children": [
+                { "text": "documento010101", "leaf": true },
+                { "text": "documento010102", "leaf": true}
+            ]  },
+                { "text": "documento0101", "leaf": true}
+            ] },
+            { "text": "Expediente02", "leaf": false, "expanded": true, 
+            "expediente": true,
+            "id": "EXP2_20160209",
+            "children": [
+                { "text": "doc0201", "leaf": true },
+                { "text": "doc0202", "leaf": true}
+            ] },
+            { "text": "Expediente03", "leaf": false, "expanded": true, 
+            "expediente": true,
+            "id": "EXP3_20160209",
+            "children": [
+                { "text": "doc0301", "leaf": true },
+                { "text": "doc0302", "leaf": true}
+            ]  }
+        ]
+	}
+}

@@ -1,0 +1,15 @@
+{"configuracion":[{"columnas":[
+{"header":"ID","dataIndex":"id","width":50,"align":"center"},
+{"header":"Fecha","dataIndex":"fecha","width":150,"align":"left"},
+{"header":"Clase","dataIndex":"clase","width":150,"align":"left"},
+{"header":"Prioridad","dataIndex":"prioridad","width":150,"align":"left"},
+{"header":"Mensaje","dataIndex":"mensaje","flex":1,"align":"left"}
+],
+"modelo":[
+{"name":"id","type":"int"},
+{"name":"fecha","type":"string"},
+{"name":"clase","type":"string"},
+{"name":"prioridad","type":"string"},
+{"name":"mensaje","type":"string"}
+]}]
+}

@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+.redondeaBordes{
+	border-radius: 10px;
+	border:outset;
+	max-width:1000px;
+}
+.labels{
+	color: #000;
+	font-size:13px;
+}
+.invisible{
+	border:none;
+	background:transparent;
+}
+.x-boundlist-item-banned-true {
+	color: gray;
+	font-style: italic;
+}
+.cancel {
+    background-image: url(../imagenes/iconos/cancel.png) !important;
+}
+.config {
+    background-image: url(../imagenes/iconos/configuracion.png) !important;
+}
+.labelGav{
+	color: #000;
+	font-size:14px;
+}
+.disk {
+    background-image: url(../imagenes/disk.png) !important;
+}

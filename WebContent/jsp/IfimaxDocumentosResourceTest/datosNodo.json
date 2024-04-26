@@ -1,0 +1,87 @@
+{
+	"items": [{
+		"name": "Nodo",
+		"value": "USR_GRALES_G1C0D1"
+	},
+	{
+		"name": "Gaveta",
+		"value": "USR_GRALES"
+	},
+	{
+		"name": "ID Expediente",
+		"value": "1"
+	},
+	{
+		"name": "ID Carpeta Padre",
+		"value": "0"
+	},
+	{
+		"name": "ID Documento",
+		"value": "1"
+	},
+	{
+		"name": "Nombre",
+		"value": "SEGURO"
+	},
+	{
+		"name": "Usuario",
+		"value": "aramirez"
+	},
+	{
+		"name": "Prioridad",
+		"value": "3"
+	},
+	{
+		"name": "Fecha Creacion",
+		"value": "2015-11-24 00:45:50.669"
+	},
+	{
+		"name": "Fecha Modificacion",
+		"value": "2016-02-10 17:18:39.633"
+	},
+	{
+		"name": "No. Accesos",
+		"value": "0"
+	},
+	{
+		"name": "No. Paginas",
+		"value": "1"
+	},
+	{
+		"name": "Titulo",
+		"value": "null"
+	},
+	{
+		"name": "Autor",
+		"value": "null"
+	},
+	{
+		"name": "Materia",
+		"value": "ORIGINAL"
+	},
+	{
+		"name": "Descripcion",
+		"value": "null"
+	},
+	{
+		"name": "claseDocumento",
+		"value": "0"
+	},
+	{
+		"name": "Estado",
+		"value": "V"
+	},
+	{
+		"name": "Tamaño",
+		"value": "793431"
+	},
+	{
+		"name": "Compartido",
+		"value": "N"
+	},
+	{
+		"name": "Token compartido",
+		"value": "null"
+	}],
+	"success": true
+}

@@ -1,0 +1,143 @@
+@CHARSET "UTF-8";
+p {
+    margin:5px;
+}
+.settings {
+    background-image:url(../imagenes/fortimax/folder_wrench.png);
+}
+.nav {
+    background-image:url(../imagenes/fortimax/folder_go.png);
+}
+.gaveta {
+    background-image:url(../imagenes/fortimax/gaveta16x16.png);
+}
+.nodo_gaveta {
+    background-image:url(../imagenes/fortimax/gaveta16x16.png);
+}
+.misdoc {
+    background-image:url(../imagenes/fortimax/misdoc16x16.png);
+}
+.expediente {
+    background-image:url(../imagenes/fortimax/expediente16x16.png);
+}
+.info {
+    background-image:url(../imagenes/fortimax/information.png);
+}
+.nodo_root {
+    background-image:url(../imagenes/fortimax/folder_16x16.png);
+}
+
+.nodo_empty {
+    background-image:url(../imagenes/fortimax/nodo_empty16x16.png);
+}
+
+.nodo_imx {
+    background-image:url(../imagenes/fortimax/image_16x16.png);
+}
+
+.nodo_ext {
+    background-image:url(../imagenes/fortimax/nodo_ext16x16.png);
+}
+.expandir {
+    background-image:url(../imagenes/fortimax/expand16x16.png);
+}
+.colapsar {
+    background-image:url(../imagenes/fortimax/collapse16x16.png);
+}
+.menucontexteliminar {
+    background-image:url(../imagenes/fortimax/cancel_16x16.png);
+}   
+.menucontextcortar {
+    background-image:url(../imagenes/fortimax/cut_16x16.png);
+}   
+.menucontextcopiar {
+    background-image:url(../imagenes/fortimax/copy_16x16.png);
+}
+.menucontextpegar {
+    background-image:url(../imagenes/fortimax/paste_16x16.png);
+}
+.menucontextnuevacarpeta {
+    background-image:url(../imagenes/fortimax/folder_add16x16.png);
+}
+.menucontextnuevodocumento {
+    background-image:url(../imagenes/fortimax/page_white_add16x16.png);
+}
+.menucontextmodificar {
+    background-image:url(../imagenes/fortimax/edit__16x16.png);
+}
+.btnbuscar {
+    background-image:url(../imagenes/fortimax/find_24x24.png);
+}
+.btnappletfortimaxupload {
+    background-image:url(../imagenes/fortimax/fupload.png);
+}
+.btnlimpiardocumento {
+    background-image:url(../imagenes/fortimax/limpiardocumento24x24.png);
+}
+.btncopiar {
+    background-image:url(../imagenes/fortimax/copy_16x16.png);
+}
+.btncortar {
+    background-image:url(../imagenes/fortimax/cut_16x16.png);
+}
+.btnpegar {
+    background-image:url(../imagenes/fortimax/paste_16x16.png);
+}
+.btncompartir {
+    background-image:url(../imagenes/fortimax/web_24x24.png);
+}
+.btnactualizar {
+    background-image:url(../imagenes/fortimax/refresh_24x24.png);
+}
+.btnActualizar16x16 {
+    background-image:url(../imagenes/fortimax/refresh_16x16.png);
+}
+.btnEngrane {
+    background-image:url(../imagenes/fortimax/execute_24x24.png);
+}
+.btnMas {
+    background-image:url(../imagenes/fortimax/add_16x16.png);
+}
+
+.btnProteger {
+    background-image:url(../imagenes/fortimax/lock_16x16.png);
+}
+
+
+.btnmodificar {
+    background-image:url(../imagenes/fortimax/options_24x24.png);
+}
+
+.btnDescargar {
+    background-image:url(../imagenes/fortimax/down_24x24.png);
+}
+
+.btnRespaldar {
+    background-image:url(../imagenes/fortimax/up_24x24.png);
+}
+.btnReporte {
+    background-image:url(../imagenes/fortimax/report.png);
+}
+
+.btnExpediente{
+    background-image:url(../imagenes/fortimax/expediente_24x24.png);
+}
+.btnCarpeta {
+    background-image:url(../imagenes/fortimax/folder_24x24.png);
+}
+.btnDocumento {
+    background-image:url(../imagenes/fortimax/document_24x24.png);
+}
+
+.btnSalir {
+    background-image:url(../imagenes/fortimax/Salir.png);
+}
+
+.nodoselectedbold .x-grid-row-selected .x-grid-cell {
+    font-weight: bold;
+}
+
+.column_bold .x-grid-cell-inner{
+	background-color:#f0f5fa;
+	font-weight:bold;
+}

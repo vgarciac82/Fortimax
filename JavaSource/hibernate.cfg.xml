@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="Fortimax">
+		<property name="show_sql">false</property>
+		<property name="format_sql">false</property>
+		<property name="use_sql_comments">false</property>
+
+		<!-- Mantener la conexion abierta -->
+		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.idle_test_period">3600</property> <!-- Revisara cada hora que la conexion siga abierta -->
+		<!--<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.timeout">1800</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		--><property name="hibernate.c3p0.preferredTestQuery">select 1;</property>
+
+		<!-- Manejo de transacciones, para que se haga autoflush y se cierre la session automitacamente -->
+		<property name="hibernate.transaction.flush_before_completion">true</property>
+		<property name="hibernate.transaction.auto_close_session">true</property>
+
+
+		<!-- Utilizar org.hibernate.dialect.MySQLInnoDBDialect para MySQL 5.1.x o anteriores, commitear con esto-->
+		<!-- Utilizar org.hibernate.dialect.MySQL5InnoDBDialect para MySQL 5.5.x en adelante-->
+		<!-- Mysql configs -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/fortimax?autoReconnect=true</property>
+
+		<!-- Oracle configs -->
+		<!--<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>-->
+		<!--<property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>-->
+		<!--<property name="hibernate.connection.url">jdbc:oracle:thin:@//localhost:1521/XE</property>-->
+
+		<!-- Drop and re-create the database schema on startup -->
+		<!-- <property name="hbm2ddl.auto">create</property> -->
+		<!-- <property name="hbm2ddl.auto">update</property> --> 
+
+		<property name="hibernate.connection.username">fortimax</property>
+		<property name="hibernate.connection.password">fortimax</property>
+
+		<mapping resource="mappings_fortimax.hbm.xml" />
+		<!--
+		<event type="post-update">
+            <listener class="com.syc.fortimax.hibernate.EventListener"/>
+        </event>
+        
+        <event type="pre-insert">
+            <listener class="com.syc.fortimax.hibernate.EventListener"/>
+        </event>
+		<event type="post-insert">
+            <listener class="com.syc.fortimax.hibernate.EventListener"/>
+        </event>
+        
+		<event type="post-delete">
+            <listener class="com.syc.fortimax.hibernate.EventListener"/>
+        </event>
+		-->
+	</session-factory>
+</hibernate-configuration>

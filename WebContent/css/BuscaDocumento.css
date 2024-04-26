@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+.descripcion{
+	font-style: italic;
+	font-size:11px;
+}
+.comboGavetas{
+	font-weight: bold;
+	font-size:11px;
+}
+.fieldSetDatos, .fieldSetEspecificos, .fieldSetTipo, .fieldSetConfig{
+	margin-left:10px;
+	margin-right:10px;
+
+}
+.fieldSetDatosIzq,.fieldSetDatosDer{
+	width:50%;
+}
+.fieldSetFechas{
+	border:none;
+}
+.panelPricipal{
+	width:100%;
+}
+.btnLimpiar{
+	background-image:url(../imagenes/iconos/limpiar32x32.png) !important;
+}
+.btnBuscar{
+	background-image:url(../imagenes/iconos/buscar32x32.png) !important;
+}
+/*.x-btn{
+	background-color:#f2f2f2 !important;
+	border-color:#bababa !important;
+	font-weight: bold !important;
+}
+.x-ie .x-btn{
+	background-color:#f2f2f2 !important;
+	border-color:#bababa !important;
+	font-weight: bold !important;
+	border-width:2px;
+}*/
+.titulo{
+	font-size:18px;
+	font-style:italic
+}
+.fieldSetDatosDer, .fieldSetDatosIzq{
+	border:none;
+}
+.radio{
+	font-size:11px;
+	font-style:italic;
+	color:#4e4dbe;
+
+}

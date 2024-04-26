@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+.uIconCls{
+    background-image: url(../resources/icons/fam/user_suit.png) !important;
+}
+.save {
+    background-image: url(../imagenes/disk.png) !important;
+}

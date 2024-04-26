@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+.botonPdfIconCls{
+	background-image:url(../imagenes/iconos/PDF32.png);
+}
+.botonZipIconCls{
+	background-image:url(../imagenes/iconos/zip32.png);
+}
+.panelCls{
+	margin-left: 30%;
+	margin-top:15px;
+}

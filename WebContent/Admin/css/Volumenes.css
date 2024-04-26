@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+.add {
+    background-image: url(../imagenes/iconos/add.gif) !important;
+}
+
+.guardar {
+    background-image: url(../imagenes/iconos/cierto.png) !important;
+    background-size:16px 16px;
+}
+.x-grid3-scroller {overflow-y: scroll;}
+.pa{
+	text-align:center;
+}

@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background: #FFF;
+	color: #000;
+	font: normal normal 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	overflow:auto;
+}
+
+table, td, a {
+	color: #000;
+	font: normal normal 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	border-color: #e9e9ee;
+}
+
+div.tableContainer {
+	border-color: #333399;
+	border-style: solid;
+	border-width: 1px;
+	height:auto;
+	width:auto;
+}
+
+#example{
+	
+	width:100%;
+}

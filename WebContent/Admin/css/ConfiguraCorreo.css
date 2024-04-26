@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+.redondeaBordes {
+	border-radius: 10px;
+	border: outset;
+	max-width: 1000px;
+}
+
+.save {
+	background-image: url(../imagenes/iconos/save.png) !important;
+}
+
+.btnRespaldarArchivoIconCls {
+	background-image: url(../imagenes/iconos/import24.png);
+}
+
+.btnRespaldarArchivoCls {
+	margin-top: 15px;
+}
+
+.btnSubirArchivoIconCls {
+	background-image: url(../imagenes/iconos/flechaArriba16.png);
+}

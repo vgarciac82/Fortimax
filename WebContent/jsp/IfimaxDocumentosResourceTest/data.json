@@ -1,0 +1,6 @@
+{"documentos":[
+	{"nodo": "USR_GRALES_G1C1D10", "nombre":"Estado de cuenta", "descripcion":"Estado de cuenta necesario para conocer los movimientos bancarios", "existencia":true, "soloLectura": true},
+	{"nodo": "USR_GRALES_G1C1D11", "nombre":"Acta de nacimiento", "descripcion":"Acta de nacimiento que avala la nacionalidad del cliente.", "existencia":true, "soloLectura": false},
+	{"nodo": "USR_GRALES_G1C1D12", "nombre":"Comprobante de domicilio", "descripcion":"Comprobante requerido como parte del trámite.", "existencia":false, "soloLectura": true},
+	{"nodo": "USR_GRALES_G1C1D13", "nombre":"Cartilla militar", "descripcion":"Uno de las identificaciones oficiales opcionales.", "existencia":false, "soloLectura": false}
+], "success": true}

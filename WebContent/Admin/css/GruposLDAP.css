@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+.numero .x-grid-cell-inner{
+	background-color:#fff;
+	font-weight:bold;
+}
+
+.numeroF{
+	font-weight:bold;
+}
+.numeroFilas{
+	font-size:12px;
+	font-style:italic;
+}
+
+.labelEncabezado{
+	font-weight:bold
+}
+.x-grid-row-over .x-grid-cell-inner {
+    font-weight: bold;
+}
+	
+	.privilegios {
+    cursor:pointer;
+}
+	

@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+.btnGuardarIconCls{
+	 background-image:url(../../imagenes/iconos/save16.png);
+}
+.fieldGeneralCls{
+	border:none;
+}

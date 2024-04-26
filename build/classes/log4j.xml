@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration PUBLIC "-//LOGGER" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration>
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d] %-5p: %m { %l } [%t] [%r ms]%n" />
+		</layout>
+	</appender>
+
+	<!-- Salida a un Archivo -->
+	<appender name="FILE" class="org.apache.log4j.FileAppender">
+		<param name="File" value="Fortimax.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d] %-5p: %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Salida a un Archivo por fecha -->
+	<appender name="DAILYROLL" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="Fortimax.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd " />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d] %-5p: %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Salida a un Archivo por tamano -->
+	<appender name="ROLL" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="Fortimax.log" />
+		<param name="MaxFileSize" value="500KB" />
+		<param name="MaxBackupIndex" value="10" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d] %-5p: %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Salida a BD para la bitacora (operaciones de usuario) -->
+	<appender name="BD" class="org.apache.log4j.jdbc.JDBCAppender">
+
+		<!-- MySQL configs -->
+		<param name="driver" value="com.mysql.jdbc.Driver" />
+		<param name="URL"
+			value="jdbc:mysql://localhost/fortimax?elideSetAutoCommits=true" />
+
+		<!-- Oracle configs -->
+		<!--<param name="driver" value="oracle.jdbc.OracleDriver" />-->
+		<!--<param name="URL" value="jdbc:oracle:thin:@//localhost:1521/XE" />-->
+
+		<param name="user" value="fortimax" />
+		<param name="password" value="fortimax" />
+		<param name="sql"
+			value="INSERT INTO imx_bitacora(Fecha,Clase,Prioridad,Mensaje) VALUES ( '%n%d{yyyy-MM-dd HH:mm:ss}','%c','%p','%.2000m')" />
+		
+		<!-- Insert para Oracle:
+		<param name="sql"
+			value="INSERT INTO imx_bitacora(ID,Fecha,Clase,Prioridad,Mensaje) VALUES (imx_bitacora_id.nextVal,TO_TIMESTAMP('%n%d{dd-MM-yyyy HH:mm:ss,SSS}', 'DD-MM-YYYY HH24:MI:SS.FF3'),'%c','%p','%.2000m')" />
+		-->
+	</appender>
+
+
+	<logger name="org.hibernate">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.hibernate.SQL">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.hibernate.type">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.apache">
+		<level value="ERROR" />
+	</logger>
+	<logger name="com.mchange.v2">
+		<level value="ERROR" />
+	</logger>
+	<!--Solo activar la siguiente sección en caso de necesitar debuggear hibernate-->
+	<!--
+	<logger name="org.hibernate">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.hibernate.SQL">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="org.hibernate.type">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.apache">
+		<level value="WARN" />
+	</logger>
+	<logger name="com.mchange.v2">
+		<level value="WARN" />
+	</logger>
+	-->
+	<!-- No descomentar lo siguiente mas que para un debuging muy intensivo del ddl -->
+	<!--
+		<logger name="org.hibernate.tool.hbm2ddl">
+    		<level value="INFO"/> 
+		</logger>
+	-->
+
+	<root>
+		<priority value="ALL" /> <!-- Cambiar INFO para produccion -->
+		<appender-ref ref="DAILYROLL" /> <!-- Cambiar "Segun el caso" para produccion -->
+		<appender-ref ref="BD"/> <!-- Activa la bitacora (usuarios)!! Descomentar para produccion -->
+		<appender-ref ref="CONSOLE"/>
+	</root>
+</log4j:configuration> 

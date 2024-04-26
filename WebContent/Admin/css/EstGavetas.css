@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+.save {
+    background-image: url(../imagenes/disk.png) !important;
+}
+.Gavetas {
+	width:16px;	
+    background-image: url(../imagenes/iconos/gaveta.png) !important;
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+.drag{
+	border-style:solid;
+border-width:4px;
+cursor:pointer;
+}

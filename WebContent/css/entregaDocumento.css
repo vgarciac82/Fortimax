@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+.lblTituloCls{
+	color:#474747;
+	font-size: 12px;
+	font-weight: bolder;
+	margin-left:15px;
+}
+.lblMensajeCls{
+	color:#474747;
+	font-size: 12px;
+	font-weight: bolder;
+	margin-left:15px;
+}
+.resaltar{
+	color:#242424;
+	font-size: 14px;
+	font-weight: bolder;
+	margin-left:15px;
+}
+.fieldSetTitulo{
+	margin-top:20px;
+	border:none;
+}
+.fieldSetMensaje{
+	margin-top:10px;
+	margin-bottom:5px;
+	border:none;
+}
+.fieldSetboton{
+	text-align:center;
+	border:none;
+}
+.btnAccionVer{
+	background-image:url(../imagenes/iconos/lupa24.png)!important;
+}
+.btnAccionDescargar{
+	background-image:url(../imagenes/iconos/descargar24.png)!important;
+}

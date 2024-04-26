@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+p {
+    margin:1px;
+}
+.x-btn-default-large .save {
+    background-image: url(../imagenes/iconos/save.png) !important;
+}

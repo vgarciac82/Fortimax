@@ -1,0 +1,937 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.syc.fortimax.hibernate.entities">
+
+	<class name="imxusr_grales" table="imxusr_grales">
+		<id name="id_gabinete" type="int">
+			<column name="ID_GABINETE" length="10" />
+		</id>
+		<property name="activo" type="char">
+			<column name="ACTIVO" length="8" />
+		</property>
+		<property name="propietario" type="string" unique="true"
+			not-null="true">
+			<column name="PROPIETARIO" length="64" />
+		</property>
+	</class>
+
+	<class name="imx_usuario_expediente" table="imx_usuario_expediente">
+		<composite-id name="id" class="imx_usuario_expediente_id">
+			<key-property name="nombre_usuario" type="string">
+				<column name="NOMBRE_USUARIO" length="32" />
+			</key-property>
+			<key-property name="id_gabinete" type="int">
+				<column name="ID_GABINETE" length="10" />
+			</key-property>
+		</composite-id>
+		<property name="fecha_registro" type="timestamp">
+			<column name="FECHA_REGISTRO" length="19" />
+		</property>
+		<property name="fecha_inicial_vigencia" type="timestamp">
+			<column name="FECHA_INICIAL_VIGENCIA" length="19" />
+		</property>
+		<property name="fecha_termino_vigencia" type="timestamp">
+			<column name="FECHA_TERMINO_VIGENCIA" length="19" />
+		</property>
+		<property name="genero" type="string">
+			<column name="GENERO" length="1" />
+		</property>
+		<property name="fecha_nacimiento" type="timestamp">
+			<column name="FECHA_NACIMIENTO" length="19" />
+		</property>
+		<property name="ocupacion" type="string">
+			<column name="OCUPACION" length="4" />
+		</property>
+		<property name="correo" type="string">
+			<column name="CORREO" length="64" />
+		</property>
+		<property name="pregunta_secreta" type="int">
+			<column name="PREGUNTA_SECRETA" length="10" />
+		</property>
+		<property name="respuesta_secreta" type="string">
+			<column name="RESPUESTA_SECRETA" length="64" />
+		</property>
+		<property name="firma_acuerdo" type="string">
+			<column name="FIRMA_ACUERDO" length="64" />
+		</property>
+		<property name="autoriza_cortesia" type="string">
+			<column name="AUTORIZA_CORTESIA" length="64" />
+		</property>
+		<property name="bytes_autorizados" type="java.lang.Long">
+			<column name="BYTES_AUTORIZADOS" />
+		</property>
+		<property name="bytes_usados" type="java.lang.Long">
+			<column name="BYTES_USADOS" />
+		</property>
+		<property name="verificado_paypal" type="string">
+			<column name="VERIFICADO_PAYPAL" length="1" />
+		</property>
+		<property name="beneficiario" type="string">
+			<column name="BENEFICIARIO" length="80" />
+		</property>
+		<property name="fecha_ultimo_acceso" type="timestamp">
+			<column name="FECHA_ULTIMO_ACCESO" length="19" />
+		</property>
+	</class>
+
+	<class name="imx_bitacora" table="imx_bitacora">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="native">
+				<param name="sequence">imx_bitacora_id</param>
+			</generator>
+		</id>
+		<property name="fecha" type="timestamp">
+			<column name="FECHA" length="19" />
+		</property>
+		<property name="clase" type="string">
+			<column name="CLASE" length="128" />
+		</property>
+		<property name="prioridad" type="string">
+			<column name="PRIORIDAD" length="128" />
+		</property>
+		<property name="mensaje" type="string">
+			<column name="MENSAJE" length="2000" />
+		</property>	
+	</class>
+
+	<class name="imx_aplicacion" table="imx_aplicacion">
+		<id name="tituloAplicacion" type="string">
+			<column name="TITULO_APLICACION" length="16" />
+		</id>
+		<property name="tblAplicacion" type="string">
+			<column name="TBL_APLICACION" length="25" />
+		</property>
+		<property name="descripcion" type="string">
+			<column name="DESCRIPCION" length="128" />
+		</property>
+		<set name="imxPrivilegios" table="imx_privilegio" inverse="true"
+			lazy="true" fetch="select">
+			<key>
+				<column name="TITULO_APLICACION" length="16" not-null="true" />
+			</key>
+			<one-to-many class="imx_usuario_privilegio" />
+		</set>
+	</class>
+
+
+	<class name="imx_carpeta" table="imx_carpeta">
+		<composite-id name="id" class="imx_carpeta_id">
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" />
+			</key-property>
+			<key-property name="idGabinete" type="int">
+				<column name="ID_GABINETE" />
+			</key-property>
+			<key-property name="idCarpeta" type="int">
+				<column name="ID_CARPETA" />
+			</key-property>
+		</composite-id>
+		<property name="nombreCarpeta" type="string">
+			<column name="NOMBRE_CARPETA" length="256" not-null="true" />
+		</property>
+		<property name="nombreUsuario" type="string">
+			<column name="NOMBRE_USUARIO" length="32" not-null="true" />
+		</property>
+		<property name="banderaRaiz" type="java.lang.Character">
+			<column name="BANDERA_RAIZ" length="1" />
+		</property>
+		<property name="fhCreacion" type="timestamp">
+			<column name="FH_CREACION" length="19" not-null="true" />
+		</property>
+		<property name="fhModificacion" type="timestamp">
+			<column name="FH_MODIFICACION" length="19" not-null="true" />
+		</property>
+		<property name="numeroAccesos" type="int">
+			<column name="NUMERO_ACCESOS" not-null="true" />
+		</property>
+		<property name="numeroCarpetas" type="int">
+			<column name="NUMERO_CARPETAS" not-null="true" />
+		</property>
+		<property name="numeroDocumentos" type="int">
+			<column name="NUMERO_DOCUMENTOS" not-null="true" />
+		</property>
+		<property name="descripcion" type="string">
+			<column name="DESCRIPCION" length="254" />
+		</property>
+		<property name="password" type="string">
+			<column name="PASSWORD" length="32" default="-1"/>
+		</property>
+	</class>
+
+	<class name="imx_descripcion" table="imx_descripcion">
+		<composite-id name="id" class="imx_descripcion_id">
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="64" />
+			</key-property>
+			<key-property name="nombreCampo" type="string">
+				<column name="NOMBRE_CAMPO" length="64" />
+			</key-property>
+		</composite-id>
+		<property name="nombreColumna" type="string">
+			<column name="NOMBRE_COLUMNA" length="256" not-null="true" />
+		</property>
+		<property name="posicionCampo" type="int">
+			<column name="POSICION_CAMPO" not-null="true" />
+		</property>
+		<property name="nombreTipoDatos" type="string">
+			<column name="NOMBRE_TIPO_DATOS" length="256" not-null="true" />
+		</property>
+		<property name="idTipoDatos" type="int">
+			<column name="ID_TIPO_DATOS" not-null="true" />
+		</property>
+		<property name="longitudCampo" type="int">
+			<column name="LONGITUD_CAMPO" not-null="true" />
+		</property>
+		<property name="valorDefCampo" type="string">
+			<column name="VALOR_DEF_CAMPO" length="256" />
+		</property>
+		<property name="mascaraCampo" type="string">
+			<column name="MASCARA_CAMPO" length="128" />
+		</property>
+		<property name="nombreIndice" type="string">
+			<column name="NOMBRE_INDICE" length="128" />
+		</property>
+		<property name="indiceTipo" type="int">
+			<column name="INDICE_TIPO" not-null="true" />
+		</property>
+		<property name="multivaluado" type="character">
+			<column name="MULTIVALUADO" length="1" />
+		</property>
+		<property name="requerido" type="character">
+			<column name="REQUERIDO" length="1" />
+		</property>
+		<property name="editable" type="character">
+			<column name="EDITABLE" length="1" />
+		</property>
+		<property name="lista" type="character">
+			<column name="LISTA" length="1" />
+		</property>
+	</class>
+
+	<class name="imx_documento" table="imx_documento">
+		<composite-id name="id" class="imx_documento_id">
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" />
+			</key-property>
+			<key-property name="idGabinete" type="int">
+				<column name="ID_GABINETE" />
+			</key-property>
+			<key-property name="idCarpetaPadre" type="int">
+				<column name="ID_CARPETA_PADRE" />
+			</key-property>
+			<key-property name="idDocumento" type="int">
+				<column name="ID_DOCUMENTO" />
+			</key-property>
+		</composite-id>
+		<property name="nombreDocumento" type="string">
+			<column name="NOMBRE_DOCUMENTO" length="256" not-null="true" />
+		</property>
+		<property name="nombreUsuario" type="string">
+			<column name="NOMBRE_USUARIO" length="32" not-null="true" />
+		</property>
+		<property name="usuarioModificacion" type="string">
+			<column name="USUARIO_MODIFICACION" length="32" />
+		</property>
+		<property name="prioridad" type="int">
+			<column name="PRIORIDAD" not-null="true" />
+		</property>
+		<property name="idTipoDocumento" type="int">
+			<column name="ID_TIPO_DOCTO" not-null="true" />
+		</property>
+		<property name="fhCreacion" type="timestamp">
+			<column name="FH_CREACION" length="19" not-null="true" />
+		</property>
+		<property name="fhModificacion" type="timestamp">
+			<column name="FH_MODIFICACION" length="19" not-null="true" />
+		</property>
+		<property name="numeroAccesos" type="int">
+			<column name="NUMERO_ACCESOS" not-null="true" />
+		</property>
+		<property name="numeroPaginas" type="int">
+			<column name="NUMERO_PAGINAS" not-null="true" />
+		</property>
+		<property name="titulo" type="string">
+			<column name="TITULO" length="25" />
+		</property>
+		<property name="autor" type="string">
+			<column name="AUTOR" length="25" />
+		</property>
+		<property name="materia" type="string">
+			<column name="MATERIA" length="25" />
+		</property>
+		<property name="descripcion" type="string">
+			<column name="DESCRIPCION" length="254" />
+		</property>
+		<property name="claseDocumento" type="java.lang.Integer">
+			<column name="CLASE_DOCUMENTO" />
+		</property>
+		<property name="estadoDocumento" type="java.lang.Character">
+			<column name="ESTADO_DOCUMENTO" length="1" />
+		</property>
+		<property name="tamanoBytes" type="java.lang.Long">
+			<column name="TAMANO_BYTES" />
+		</property>
+		<property name="compartir" type="string">
+			<column name="COMPARTIR" length="1"/>
+		</property>
+		<property name="tokenCompartir" type="string">
+			<column name="TOKEN_COMPARTIR" length="80" />
+		</property>
+		<property name="fechaCompartido" type="timestamp">
+			<column name="FECHA_COMPARTIDO" length="19" />
+		</property>
+		<property name="diasPermitidos" type="string">
+			<column name="DIAS_PERMITIDOS" length="6" />
+		</property>
+		<property name="fechaExpira" type="timestamp">
+			<column name="FECHA_EXPIRA" length="19" />
+		</property>
+	</class>
+
+	<class name="imx_grupo" table="imx_grupo">
+		<id name="nombreGrupo" type="string">
+			<column name="NOMBRE_GRUPO" length="32" />
+			<generator class="assigned" />
+		</id>
+		<property name="descripcion" type="string">
+			<column name="DESCRIPCION" />
+		</property>
+		<set name="imxGrupoUsuarios" table="imx_grupo_usuario" inverse="true"
+			lazy="true" fetch="select">
+			<key>
+				<column name="NOMBRE_GRUPO" length="32" not-null="true" />
+			</key>
+			<one-to-many class="imx_grupo_usuario" />
+		</set>
+		<set name="imxGrupoPrivilegios" table="imx_grupo_privilegio"
+			inverse="true" lazy="true" fetch="select">
+			<key>
+				<column name="NOMBRE_GRUPO" length="32" not-null="true" />
+			</key>
+			<one-to-many class="imx_grupo_privilegio" />
+		</set>
+	</class>
+
+	<class name="imx_grupo_privilegio" table="imx_grupo_privilegio">
+		<composite-id name="id" class="imx_grupo_privilegio_id">
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" />
+			</key-property>
+			<key-property name="nombreGrupo" type="string">
+				<column name="NOMBRE_GRUPO" length="32" />
+			</key-property>
+		</composite-id>
+		<many-to-one name="imxGrupo" class="imx_grupo" update="false"
+			insert="false" fetch="select">
+			<column name="NOMBRE_GRUPO" length="32" not-null="true" />
+		</many-to-one>
+		<property name="nombreNivel" type="string">
+			<column name="NOMBRE_NIVEL" length="16" not-null="true" />
+		</property>
+		<property name="privilegio" type="int">
+			<column name="PRIVILEGIO" not-null="true" />
+		</property>
+	</class>
+
+	<class name="imx_grupo_usuario" table="imx_grupo_usuario">
+		<composite-id name="id" class="imx_grupo_usuario_id">
+			<key-property name="nombreGrupo" type="string">
+				<column name="NOMBRE_GRUPO" length="32" />
+			</key-property>
+			<key-property name="nombreUsuario" type="string">
+				<column name="NOMBRE_USUARIO" length="32" />
+			</key-property>
+		</composite-id>
+		<many-to-one name="imxGrupo" class="imx_grupo" update="false"
+			insert="false" fetch="select">
+			<column name="NOMBRE_GRUPO" length="32" not-null="true" />
+		</many-to-one>
+	</class>
+
+	<class name="imx_seguridad" table="imx_seguridad">
+		<composite-id name="id" class="imx_seguridad_id">
+			<key-property name="prioridad" type="int">
+				<column name="PRIORIDAD" />
+			</key-property>
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" />
+			</key-property>
+		</composite-id>
+		<property name="nombreNivel" type="string">
+			<column name="NOMBRE_NIVEL" length="16" />
+		</property>
+		<property name="descripcion" type="string">
+			<column name="DESCRIPCION" length="128" />
+		</property>
+	</class>
+
+	<class name="imx_tipo_documento" table="imx_tipo_documento">
+		<composite-id name="id" class="imx_tipo_documento_id">
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" />
+			</key-property>
+			<key-property name="idTipoDocto" type="int">
+				<column name="ID_TIPO_DOCTO" />
+			</key-property>
+		</composite-id>
+		<property name="prioridad" type="int">
+			<column name="PRIORIDAD" not-null="true" />
+		</property>
+		<property name="nombreTipoDocto" type="string">
+			<column name="NOMBRE_TIPO_DOCTO" length="32" not-null="true" />
+		</property>
+		<property name="descripcion" type="string">
+			<column name="DESCRIPCION" length="254" not-null="true" />
+		</property>
+	</class>
+
+	<class name="imx_tipo_usuario" table="imx_tipo_usuario">
+		<id name="tipoUsuario" type="int">
+			<column name="TIPO_USUARIO" />
+			<generator class="assigned" />
+		</id>
+		<property name="tuDescripcion" type="string">
+			<column name="TU_DESCRIPCION" length="80" not-null="true" />
+		</property>
+		<set name="imxUsuarios" table="imx_usuario" inverse="true" lazy="true"
+			fetch="select">
+			<key>
+				<column name="TIPO_USUARIO" />
+			</key>
+			<one-to-many class="imx_usuario" />
+		</set>
+	</class>
+
+	<class name="imx_usuario" table="imx_usuario">
+		<id name="nombreUsuario" type="string">
+			<column name="NOMBRE_USUARIO" length="32" />
+			<generator class="assigned" />
+		</id>
+		<many-to-one name="imxTipoUsuario" class="imx_tipo_usuario"
+			fetch="select">
+			<column name="TIPO_USUARIO" />
+		</many-to-one>
+		<property name="banderaConexion" type="char" length="1">
+			<column name="BANDERA_CONEXION" length="1" not-null="true" />
+		</property>
+		<property name="descripcion" type="string">
+			<column name="DESCRIPCION" length="64" />
+		</property>
+		<property name="codigo" type="string">
+			<column name="CODIGO" length="3" not-null="true" />
+		</property>
+		<property name="tipoOperacion" type="char" length="1">
+			<column name="TIPO_OPERACION" length="1" not-null="true" />
+		</property>
+		<property name="cdg" type="string">
+			<column name="CDG" length="32" />
+		</property>
+		<property name="nombre" type="string">
+			<column name="NOMBRE" length="20" />
+		</property>
+		<property name="apellidoPaterno" type="string">
+			<column name="APELLIDO_PATERNO" length="20" />
+		</property>
+		<property name="apellidoMaterno" type="string">
+			<column name="APELLIDO_MATERNO" length="20" />
+		</property>
+		<property name="cambioCdg" type="char">
+			<column name="CAMBIO_CDG" not-null="true" default="0" length="1" />
+		</property>
+		<property name="intentosAcceso" type="string" length="1">
+			<column name="INTENTOS_ACCESO" length="1" />
+		</property>
+		<property name="activo" type="int">
+			<column name="ACTIVO" not-null="true" default="0"></column>
+		</property>
+		<property name="administrador" type="int">
+			<column name="ADMINISTRADOR" not-null="true" default="0"></column>
+		</property>
+		<set name="imxPrivilegios" table="imx_privilegio" inverse="true"
+			lazy="true" fetch="select">
+			<key>
+				<column name="NOMBRE_USUARIO" length="32" not-null="true" />
+			</key>
+			<one-to-many class="imx_usuario_privilegio" />
+		</set>
+	</class>
+
+	<class name="imx_usuario_privilegio" table="imx_privilegio">
+		<composite-id name="id" class="imx_usuario_privilegio_id">
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" />
+			</key-property>
+			<key-property name="nombreUsuario" type="string">
+				<column name="NOMBRE_USUARIO" length="32" />
+			</key-property>
+		</composite-id>
+		<many-to-one name="imxUsuario" class="imx_usuario" update="false"
+			insert="false" fetch="select">
+			<column name="NOMBRE_USUARIO" length="32" not-null="true" />
+		</many-to-one>
+		<many-to-one name="imxAplicacion" class="imx_aplicacion"
+			update="false" insert="false" fetch="select">
+			<column name="TITULO_APLICACION" length="16" not-null="true" />
+		</many-to-one>
+		<property name="nombreNivel" type="string">
+			<column name="NOMBRE_NIVEL" length="16" not-null="true" />
+		</property>
+		<property name="privilegio" type="int">
+			<column name="PRIVILEGIO" not-null="true" />
+		</property>
+	</class>
+
+	<class name="imx_pagina_index" table="imx_pagina_index">
+		<id name="ID" column="ID" unsaved-value="null">
+			<generator class="increment" />
+		</id>
+		<property name="TITULO_APLICACION" type="string">
+			<column name="TITULO_APLICACION" />
+		</property>
+		<property name="ID_CARPETA_PADRE" type="int">
+			<column name="ID_CARPETA_PADRE" />
+		</property>
+		<property name="ID_DOCUMENTO" type="int">
+			<column name="ID_DOCUMENTO" />
+		</property>
+		<property name="ID_GABINETE" type="int">
+			<column name="ID_GABINETE" />
+		</property>
+		<property name="NUMERO_PAGINA" type="int">
+			<column name="NUMERO_PAGINA" />
+		</property>
+		<property name="DOCUMENTO_ORIGINAL" type="string">
+			<column name="DOCUMENTO_ORIGINAL" />
+		</property>
+		<property name="PROCESADO" type="string">
+			<column name="PROCESADO" />
+		</property>
+		<property name="TIPO_DOCUMENTO" type="string">
+			<column name="TIPO_DOCUMENTO" />
+		</property>
+		<property name="EXTENSION" type="string">
+			<column name="EXTENSION" />
+		</property>
+		<property name="FHMODIFICACION" type="timestamp">
+			<column name="FH_MODIFICACION" length="19" />
+		</property>
+
+	</class>
+
+	<class name="imx_config" table="imx_config">
+		<id column="ID" name="ID">
+			<generator class="increment" />
+		</id>
+		<property name="name" not-null="true" type="string">
+			<column name="name" not-null="true" />
+		</property>
+		<property name="value" type="text">
+			<column name="value" length="20000" />
+		</property>
+		<property name="category" not-null="true" type="string">
+			<column name="category" not-null="true" />
+		</property>
+		<property name="description" type="string">
+			<column name="description" />
+		</property>
+	</class>
+	
+	<class name="imx_catalogo" table="imx_catalogo">	
+		<id name="NombreCatalogo" type="string">
+			<column name="NOMBRE_CATALOGO" length="16" not-null="true" />
+			<generator class="assigned" />
+		</id>	
+		<property name="TblCatalogo" type="string" not-null="false" >
+			<column name="TBL_CATALOGO" length="25" not-null="false" />
+		</property>
+		<property name="LongitudCampo" not-null="true" type="int">
+			<column name="LONGITUD_CAMPO" not-null="true" />
+		</property>
+		<property name="Definicion"  type="text">
+			<column name="DEFINICION" />
+		</property>
+	</class>
+
+	<class name="imx_unidad_volumen" table="imx_unidad_volumen">
+		<composite-id name="Id" class="imx_unidad_volumen_id">
+			<key-property name="Unidad" type="string">
+				<column name="UNIDAD" length="50" />
+			</key-property>
+			<key-property name="RutaBase" type="string">
+				<column name="RUTA_BASE" length="50" />
+			</key-property>
+		</composite-id>
+		<property name="EstadoUnidad" type="int">
+			<column name="ESTADO_UNIDAD" not-null="true" />
+		</property>
+		<property name="TipoDispositivo" type="char">
+			<column name="TIPO_DISPOSITIVO" length="1" not-null="true" />
+		</property>
+		</class>
+	  	
+	  	<class name="imx_volumen" table="imx_volumen">	
+		<id name="Volumen" type="string">
+			<column name="VOLUMEN" length="8" not-null="true" />
+			<generator class="assigned" />
+		</id>	
+		<property name="UnidadDisco"  type="string">
+			<column name="UNIDAD_DISCO" length="50" not-null="true" />
+		</property>
+		<property name="RutaBase" type="string">
+			<column name="RUTA_BASE" length="50" not-null="true" />
+		</property>
+		<property name="RutaDirectorio"  type="string">
+			<column name="RUTA_DIRECTORIO" length="70" not-null="true" />
+		</property>
+		<property name="Capacidad"  type="char">
+			<column name="CAPACIDAD" length="1" not-null="true" />
+		</property>
+		<property name="TipoVolumen" type="char">
+			<column name="TIPO_VOLUMEN" length="1" not-null="true" />
+		</property>
+	</class> 
+	
+	<class name="imx_privilegio" table="imx_privilegio">
+		<composite-id name="id" class="imx_privilegio_id">
+			<key-property name="TituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" />
+			</key-property>
+			<key-property name="NombreUsuario" type="string">
+				<column name="NOMBRE_USUARIO" length="32" />
+			</key-property>
+		</composite-id>
+		<property name="NombreNivel" type="string">
+			<column name="NOMBRE_NIVEL" length="16" />
+		</property>
+		<property name="Privilegio" type="int">
+			<column name="PRIVILEGIO" length="10" />
+		</property>
+	</class>
+	
+	<class name="imx_catalogo_privilegios" table="imx_catalogo_privilegios">	
+		<id name="Id" type="int">
+			<column name="ID"  />
+		</id>	
+		<property name="Nombre"  type="string">
+			<column name="NOMBRE" length="20" />
+		</property>
+		<property name="Valor" type="int" unique="true">
+			<column name="VALOR" not-null="true"  />
+		</property>
+		<property name="Descripcion"  type="string">
+			<column name="DESCRIPCION" length="70" />
+		</property>
+	</class> 
+	
+ 	<class name="imx_estruc_doctos" table="imx_estruc_doctos">
+		<composite-id name="id" class="imx_estruc_doctos_id">
+			<key-property name="TituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" />
+			</key-property>
+			<key-property name="NombreEstructura" type="string">
+				<column name="NOMBRE_ESTRUCTURA" length="50" />
+			</key-property>
+			<key-property name="PosicionElemento" type="int">
+				<column name="POSICION_ELEMENTO" length="10" />
+			</key-property>
+		</composite-id>
+		<property name="NombreElemento"  type="string">
+			<column name="NOMBRE_ELEMENTO" length="32" />
+		</property>
+		<property name="Profundidad"  type="int">
+			<column name="PROFUNDIDAD" length="10" />
+		</property>
+		<property name="Prioridad"  type="int">
+			<column name="PRIORIDAD" length="10" />
+		</property>
+		<property name="LNombreEstructura"  type="string">
+			<column name="L_NOMBRE_ESTRUCTURA" length="50" />
+		</property>
+		<property name="Descripcion"  type="string">
+			<column name="DESCRIPCION" length="254" />
+		</property>
+	</class> 
+	 <class name="imx_catalogo_estructuras" table="imx_catalogo_estructuras">
+		<id name="Id" type="int">
+			<column name="ID" not-null="true" />
+			<generator class="increment" />
+		</id>
+		<property name="Nombre" type="string" unique="true">
+			<column name="NOMBRE" length="50" not-null="true"  />
+		</property>	
+		<property name="Descripcion" type="string">
+			<column name="DESCRIPCION" length="80"  />
+		</property>	
+		<property name="Definicion"  type="text">
+			<column name="DEFINICION" />
+		</property>
+	</class>
+	
+	 <class name="imx_catalogo_tipo_documento" table="imx_catalogo_tipo_documento">
+	     <id name="Id" type="int">
+			<column name="ID"  />
+			<generator class="increment" />
+		</id>
+		<property name="Nombre" type="string" unique="true">
+			<column name="NOMBRE" length="50" not-null="true"  />
+		</property>	
+		<property name="Descripcion" type="string">
+			<column name="DESCRIPCION" length="80"  />
+		</property>	
+		<property name="EstructuraFormulario"  type="text">
+			<column name="ESTRUCTURA_FORMULARIO" length="20000" />
+		</property>
+	     </class>
+	     
+	<class name="imx_tipos_documentos_index" table="imx_tipos_documentos_index">
+		<composite-id name="id" class="imx_tipos_documentos_index_id">
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" />
+			</key-property>
+			<key-property name="idGabinete" type="int">
+				<column name="ID_GABINETE" />
+			</key-property>
+			<key-property name="idCarpetaPadre" type="int">
+				<column name="ID_CARPETA_PADRE" />
+			</key-property>
+			<key-property name="idDocumento" type="int">
+				<column name="ID_DOCUMENTO" />
+			</key-property>
+			<key-property name="idTipoDocumento" type="int">
+				<column name="ID_TIPO_DOCUMENTO" />
+			</key-property>
+			<key-property name="nombreCampo" type="string">
+				<column name="NOMBRE_CAMPO" length="16" />
+			</key-property>
+		</composite-id>
+		<property name="valorCampo" type="string">
+			<column name="VALOR_CAMPO" length="256"/>
+		</property>
+	</class>
+	
+	<class name="imx_videos" table="imx_videos">
+		<id name="Id" column="id" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="Seccion" type="string">
+			<column name="Seccion" length="25" />
+		</property>
+		<property name="NombreVideo" type="string">
+			<column name="NombreVideo" length="40" />
+		</property>
+		<property name="Descripcion" type="text">
+			<column name="Descripcion" length="250" />
+		</property>
+		<property name="Ruta" type="string">
+			<column name="Ruta" length="50" />
+		</property>
+		<property name="Administrador" type="string">
+			<column name="Administrador" length="1" />
+		</property>
+	</class>
+
+	<class name="imx_catalogo_atributos" table="imx_catalogo_atributos">
+		<id name="id" column="ID_ATRIBUTO" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="etiqueta" type="string">
+			<column name="ETIQUETA_ATRIBUTO" length="25" not-null="true" />
+		</property>
+		<property name="posicion" type="int">
+			<column name="POSICION_ATRIBUTO" not-null="true" />
+		</property>
+		<property name="tipo" type="string">
+			<column name="TIPO_ATRIBUTO" length="10" not-null="true" />
+		</property>		
+		<property name="longitud" type="int">
+			<column name="LONGITUD_ATRIBUTO" not-null="true" />
+		</property>
+		<property name="descripcion" type="text">
+			<column name="DESCRIPCION_ATRIBUTO" length="100" />
+		</property>
+	</class>
+	
+		<class name="imx_documentos_atributos" table="imx_documentos_atributos">
+		<composite-id name="id" class="imx_documentos_atributos_id">
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" not-null="true" />
+			</key-property>
+			<key-property name="idGabinete" type="int">
+				<column name="ID_GABINETE" not-null="true" />
+			</key-property>
+			<key-property name="idCarpetaPadre" type="int">
+				<column name="ID_CARPETA_PADRE" not-null="true"/>
+			</key-property>
+			<key-property name="idDocumento" type="int">
+				<column name="ID_DOCUMENTO" not-null="true" />
+			</key-property>
+			<key-property name="idAtributo" type="int" >
+				<column name="ID_ATRIBUTO" not-null="true" />
+			</key-property>
+		</composite-id>
+		<property name="Valor" type="string">
+			<column name="VALOR_ATRIBUTO" length="100" />
+		</property>
+	</class>
+	
+	
+	<class name="imx_pagina" table="imx_pagina">
+		<composite-id name="Id" class="imx_pagina_id">
+			<key-property name="TituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16"/>
+			</key-property>
+			<key-property name="IdGabinete" type="int">
+				<column name="ID_GABINETE" not-null="true"/>
+			</key-property>
+			<key-property name="IdCarpetaPadre" type="int">
+				<column name="ID_CARPETA_PADRE" not-null="true"/>
+			</key-property>
+			<key-property name="IdDocumento" type="int">
+				<column name="ID_DOCUMENTO" not-null="true"/>
+			</key-property>
+			<key-property name="NumeroPagina" type="int">
+				<column name="NUMERO_PAGINA" not-null="true"/>
+			</key-property>
+		</composite-id>
+		<many-to-one name="Volumen" class="imx_volumen" update="false" insert="false" fetch="join">
+			<column name="VOLUMEN" length="8"/>
+		</many-to-one>
+		<property name="TipoVolumen" type="string">
+			<column name="TIPO_VOLUMEN" length="1" />
+		</property>
+		<property name="NomArchivoVol" type="string">
+			<column name="NOM_ARCHIVO_VOL"  length="257" />
+		</property>
+		<property name="NomArchivoOrg" type="string">
+			<column name="NOM_ARCHIVO_ORG"  length="257" />
+		</property>
+		<property name="TipoPagina" type="string">
+			<column name="TIPO_PAGINA"  length="1" />
+		</property>
+		<property name="Anotaciones" type="string">
+			<column name="ANOTACIONES"  length="254" />
+		</property>
+		<property name="EstadoPagina" type="string">
+			<column name="ESTADO_PAGINA"  length="1" />
+		</property>
+		<property name="TamanoBytes" type="int">
+			<column name="TAMANO_BYTES" not-null="true" />
+		</property>
+		<property name="Pagina" type="int">
+			<column name="PAGINA"  />
+		</property>
+	</class>
+	<class name="imx_perfiles_privilegios" table="imx_perfiles_privilegios">	
+		<id name="Id" type="int">
+			<column name="ID"  />
+			<generator class="increment" />
+		</id>	
+		<property name="Nombre"  type="string">
+			<column name="NOMBRE" length="25" />
+		</property>
+		<property name="Valor" type="int" unique="true">
+			<column name="VALOR" not-null="true"  />
+		</property>
+		<property name="Descripcion"  type="string">
+			<column name="DESCRIPCION" length="70" />
+		</property>
+	</class>
+	
+	<class name="imx_historico_documento" table="imx_historico_documento">
+		<composite-id name="id" class="imx_historico_documento_id">
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" />
+			</key-property>
+			<key-property name="idGabinete" type="int">
+				<column name="ID_GABINETE" />
+			</key-property>
+			<key-property name="idCarpetaPadre" type="int">
+				<column name="ID_CARPETA_PADRE" />
+			</key-property>
+			<key-property name="idDocumento" type="int">
+				<column name="ID_DOCUMENTO" />
+			</key-property>
+			<key-property name="idVersion" type="int">
+				<column name="ID_VERSION" />
+			</key-property>
+		</composite-id>
+		<property name="fechaGeneracion" type="timestamp">
+			<column name="FECHA_GENERACION" length="19"/>
+		</property>
+		<property name="nombreDocumento" type="string">
+			<column name="NOMBRE_DOCUMENTO" length="256"/>
+		</property>
+		<property name="descripcion" type="string">
+			<column name="DESCRIPCION" length="256"/>
+		</property>
+		<property name="numeroPaginas" type="int">
+			<column name="NUMERO_PAGINAS"/>
+		</property>
+		<property name="tamano" type="java.lang.Long">
+			<column name="TAMANO"/>
+		</property>
+		<property name="usuarioGenerador" type="string">
+			<column name="USUARIO_GENERADOR" length="32"/>
+		</property>
+		<property name="plantilla" type="text">
+			<column name="PLANTILLA" length="20000"/>
+		</property>
+		<many-to-one name="imx_volumen" class="imx_volumen" update="false" insert="false" fetch="select">
+			<column name="VOLUMEN" length="8"/>
+		</many-to-one>
+		<property name="volumen" type="string">
+ 			<column name="VOLUMEN" length="8"/>
+		</property>
+		<property name="nomArchivoVol" type="string">
+			<column name="NOM_ARCHIVO_VOL"  length="257" />
+		</property>
+		<property name="nomArchivoOrg" type="string">
+			<column name="NOM_ARCHIVO_ORG"  length="257" />
+		</property>		
+	</class> 
+	
+	<class name="imx_documentoextend" table="imx_documentoextend">	
+		<id name="tokenCompartir" type="string">
+			<column name="TOKEN_COMPARTIR" length="25" />
+		</id>	
+		<property name="banderaDescarga"  type="string">
+			<column name="BANDERA_DESCARGAR" length="1" />
+		</property>
+	</class>
+	
+	<class name="imx_campo_catalogo" table="imx_campo_catalogo">	
+		<composite-id name="id" class="imx_campo_catalogo_id">
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" />
+			</key-property>
+			<key-property name="nombreCampo" type="string">
+				<column name="NOMBRE_CAMPO" length="16" />
+			</key-property>
+			<key-property name="nombreCatalogo" type="string">
+				<column name="NOMBRE_CATALOGO" length="16" />
+			</key-property>
+		</composite-id>
+	</class>
+	
+	<class name="imx_org_carpeta" table="imx_org_carpeta">	
+		<composite-id name="id" class="imx_org_carpeta_id">
+			<key-property name="tituloAplicacion" type="string">
+				<column name="TITULO_APLICACION" length="16" not-null="true" />
+			</key-property>
+			<key-property name="idGabinete" type="int">
+				<column name="ID_GABINETE" not-null="true" />
+			</key-property>
+			<key-property name="idCarpetaHija" type="int">
+				<column name="ID_CARPETA_HIJA" not-null="true" />
+			</key-property>
+		</composite-id>
+		<property name="idCarpetaPadre" type="int">
+			<column name="ID_CARPETA_PADRE" not-null="true" />
+		</property>
+		<property name="nombreHija" type="string">
+			<column name="NOMBRE_HIJA" length="256" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

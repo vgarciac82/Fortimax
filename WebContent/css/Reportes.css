@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+.fieldSetOcultos{
+	border:none;
+}
+.fieldSetCamposCls{
+	margin-top:5px;
+	margin-left:5px;
+	margin-right:5px;
+}
+.fieldSetPlantillaCls{
+	margin-top:5px;
+	margin-left:5px;
+	margin-right:5px;
+}
+.proAtributos{
+	margin-top:5px;
+	margin-left:5px;
+	margin-right:5px;
+}
+.comboGavetas{
+	font-weight: bold;
+	font-size:11px;
+}
+.btnSeleccionaGavetaIconCls{
+	background-image:url(../imagenes/iconos/ok16.png);
+}
+.btnCambiosGavetaIconCls{
+	background-image:url(../Admin/imagenes/iconos/gaveta.png);
+}
+
+.btnGenerarReporteIconCls{
+	background-image:url(../imagenes/iconos/documentoHistorico16.png);
+}
+.fieldSetsFiltros{
+	margin-top:15px;
+	margin-left:15px;
+	margin-right:25px;
+}
+.panelArbolEstructuraCls{
+	margin-top:15px;
+	margin-left:15px;
+	margin-right:15px;
+	margin-bottom:15px;
+}
+}

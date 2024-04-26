@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+.panelPrincipalCls{
+	margin-top:30px;
+	margin-left:15px;
+}
+.lblTextoComponentCls{
+	color:#242424;
+	font-size: 12px;
+	font-weight: bolder;
+}
+.lblTextoCls{
+}
+.fieldSetCls{
+	margin-left:15px;
+	margin-right:15px;
+	margin-top:15px;
+}
+.x-panel-body{
+    background-color: #dfe8f7;
+}
+.btnDescargarCls{
+	background-image:url(../imagenes/iconos/descargar24.png)!important;
+}
+.fieldSetBotonCls{
+	border:none;
+	text-align:center;
+}

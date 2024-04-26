@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+.save {
+    background-image: url(../imagenes/disk.png) !important;
+}
+.usuario {
+    background-image: url(../resources/icons/fam/user_suit.png) !important;
+}
+.drag{
+	border-style:solid;
+border-width:4px;
+cursor:pointer;
+}
+.labels{
+	color: #000;
+	font-size:11px;
+}
+
+

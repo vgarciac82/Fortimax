@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+#grdArbol .seccionCls .x-grid-cell-inner {
+    font-size: 1.5em;
+    height:40px;
+}
+#grdArbol .videoCls .x-grid-cell-inner {
+    font-size: 1.4em;
+    height:35px;
+    background-color:#dfe8f6;
+}
+#grdArbol .videoCls .x-grid-cell-inner:hover {
+    font-size: 1.4em;
+    height:35px;
+    background-color:#c2d7f8;
+}
+.videoCls{
+	
+}
+.videoIconCls{
+    background-image: url(../imagenes/iconos/video.png) !important;
+    width:16px;	
+    background-image: url(../imagenes/iconos/video.png) !important;
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+
+.lblTituloInformacion{
+	margin-top:15px;
+	margin-left:5px;
+}
+.titulo{
+	color:#474747;
+	font-size: 14px;
+	font-weight: bolder;
+}
+.seccion{
+	color:#474747;
+	font-size: 12px;
+	font-weight: bolder;
+}
+.descripcion{
+	color:#474747;
+	font-size: 12px;
+	font-weight: bolder;
+}
+.imagenPortada{
+	width:50%;
+	align:center;
+	margin-left:25%;
+}

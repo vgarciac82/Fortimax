@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+
+.import {
+    background-image: url(../imagenes/import.png) !important;
+}
+
+.export {
+    background-image: url(../imagenes/export.png) !important;
+}
+.next {
+    background-image: url(../imagenes/next.png) !important;
+}
+.prev {
+    background-image: url(../imagenes/prev.png) !important;
+}
+.panPrincipal{
+	width:100%;
+}
+.disk {
+    background-image: url(../imagenes/disk.png) !important;
+}
+.red { 
+ background-color: #f00;
+}
+.custom-grid .x-grid-cell { 
+    background-color: ##D8D8D8; 
+}
+
+.tamMax{
+	
+	min-width:900px;
+}
+.over{
+	cursor:pointer;
+}
+.tree{
+	color: #f00;
+}
+.row{
+	width:200px;
+}
+#grdPrivilegiosGuardados .usrNode .x-grid-cell-inner {
+    font-size: 1.4em;
+}
+.usuario {
+    background-image: url(../resources/icons/fam/user_suit.png) !important;
+}
+.grupo {
+    background-image: url(../resources/icons/fam/user_gray.png) !important;
+}
+#grdUsuarios .x-column-header-checkbox,#grdGavetas .x-column-header-checkbox, #grdPrivilegios .x-column-header-checkbox {
+	display: none;
+}

@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+#miniaturas {
+    background-color: #fff;
+    text-shadow: #fff 0 1px 0;
+    position: relative;
+    display: block;
+    height: auto;
+}
+
+#miniaturas div.miniatura img {
+    margin-bottom: 1px;
+}
+
+#miniaturas div.miniatura {
+    float: left;
+    padding: 8px 17px;
+    margin: 5px;
+/*    margin: 10px 0 0 25px;*/
+    text-align: center;
+    line-height: 14px;
+    color: #333;
+    font-size: 11px;
+    font-family: "Helvetica Neue",sans-serif;
+    height: 130px;
+    width: 120px;
+    overflow: hidden;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+.x-ie6 #miniaturas div.miniatura,
+.x-ie7 #miniaturas div.miniatura,
+.x-ie8 #miniaturas div.miniatura {
+    border-top: none;
+    padding: 3px 2px;
+    margin: 2px;
+}
+
+#miniaturas div.miniatura-hover {
+    background-color: #eee;
+}
+
+#miniaturas .x-item-selected {
+    background-color: #D3E1F1 !important;
+}
+
+#miniaturas div.miniatura span {
+    color: #999;
+}
+
+.fieldSetNoBorder{
+	border:none;
+}
+.btnAgregarContenido{
+	background-image:url(../../imagenes/IfimaxDocumentos/addContent.png);
+}
+.btnGuardar{
+	background-image:url(../../imagenes/IfimaxDocumentos/accept.png);
+}
+.btnEliminarContenido{
+	background-image:url(../../imagenes/IfimaxDocumentos/deleteContent.png);
+}
+.btnCancelar{
+	background-image:url(../../imagenes/IfimaxDocumentos/exit.png);
+}
+.btnEliminar{
+	background-image:url(../../imagenes/IfimaxDocumentos/delete.png);
+}
+.btnSubir{
+	background-image:url(../../imagenes/IfimaxDocumentos/flechaArriba16.png);
+}
+.btnEnviar{
+	background-image:url(../../imagenes/IfimaxDocumentos/import24.png);
+}
+.btnAgregar{
+	background-image:url(../../imagenes/IfimaxDocumentos/add.png);
+}
+.btnFlechaDerecha{
+	background-image:url(../../imagenes/IfimaxDocumentos/flechaDerecha16.png);
+}
+.btnFlechaIzquierda{
+	background-image:url(../../imagenes/IfimaxDocumentos/flechaIzquierda16.png);
+}
+.roundedBorder{
+  -moz-border-radius:5px;  
+  border-radius: 5px;  
+  -webkit-border-radius: 5px;
+}
+.dataViewStyle{
+	background-color:#ffffff;
+	border:1px solid #99bbe8;;
+}

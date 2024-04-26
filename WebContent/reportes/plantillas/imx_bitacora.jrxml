@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Fortimax" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bcc29ce5-306e-4488-bd38-e37f37a16c1c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#A1D6FA"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="rutaImagenes" class="java.lang.String"/>
+	<field name="id" class="java.lang.Long"/>
+	<field name="fecha" class="java.lang.String"/>
+	<field name="clase" class="java.lang.String"/>
+	<field name="prioridad" class="java.lang.String"/>
+	<field name="mensaje" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="133" splitType="Stretch">
+			<image>
+				<reportElement uuid="6197a4ec-fc5f-49aa-8694-205ee6552576" x="0" y="0" width="164" height="126"/>
+				<imageExpression><![CDATA[$P{rutaImagenes}+"logoReporte.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="1f8d3fd8-cba4-4935-a080-f9fce880c30a" style="Title" x="164" y="20" width="253" height="62"/>
+				<textElement verticalAlignment="Middle">
+					<font size="24" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Reporte de Bitacora]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="e43cd202-4b79-4f73-8868-0a3f0a6a211c" x="415" y="30" width="137" height="40"/>
+				<imageExpression><![CDATA[$P{rutaImagenes}+"fortimaxReporte.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement uuid="339bd0cf-8d61-4fa4-a0ef-1d6fdeae9529" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="6fe56265-6552-46d3-8586-dfb79bf50aa2" style="Column header" x="1" y="0" width="57" height="15" forecolor="#086FB4"/>
+				<textElement/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2791da63-6b2c-4050-8135-b52726953291" style="Column header" x="182" y="0" width="190" height="15" forecolor="#086FB4"/>
+				<textElement/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2571e48-d9de-45d8-8b8d-0c40a46edeec" style="Column header" x="374" y="0" width="180" height="15" forecolor="#086FB4"/>
+				<textElement/>
+				<text><![CDATA[Clase]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3f9d30f3-ef27-4fbf-a990-c29555477da2" style="Column header" x="80" y="0" width="60" height="15" forecolor="#086FB4"/>
+				<textElement/>
+				<text><![CDATA[Prioridad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="80" splitType="Stretch">
+			<frame>
+				<reportElement uuid="605295d1-e79a-4399-9ee0-aaae9419fd9b" style="Row" mode="Opaque" x="0" y="0" width="555" height="80"/>
+				<textField>
+					<reportElement uuid="55baed04-ae4b-418e-a942-ddc3450c63ed" x="0" y="2" width="60" height="16"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="54b6f27b-979a-45b7-be90-b834422b5871" x="178" y="0" width="190" height="19"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="3f028fb0-5c35-409d-8bcb-15562f88e689" x="372" y="1" width="179" height="18"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{clase}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="542cdddf-e45e-442d-8bb7-c350a1bbf6cc" x="2" y="40" width="550" height="39"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{mensaje}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="dcec6dc3-9304-413c-be32-69cc745315f2" style="Column header" x="2" y="20" width="60" height="15" forecolor="#086FB4"/>
+					<textElement/>
+					<text><![CDATA[Mensaje]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="928e0643-bf40-4263-ac2d-8f00686082dd" x="78" y="0" width="92" height="17"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{prioridad}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="e8b01bf2-7a98-481d-b9ca-ac901fe26adf" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="af4ad4ec-ef93-4587-b568-903727d25b7b" x="1" y="27" width="547" height="10"/>
+				<textElement textAlignment="Justified">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[*El contenido de este documento es propiedad exclusiva de la entidad o persona que lo emite. No puede ser difundido o copiado sin autorizacion previa. ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="923a5db9-7ecf-4d6d-87d1-723dfd319bf1" mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#FFFFFF" backcolor="#086FB4"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="c38cfd32-89b2-4029-9f35-0db705d312d3" style="Column header" x="533" y="0" width="40" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="a8f6045d-7f54-4ecf-9e10-15fad40a00b7" style="Column header" x="453" y="0" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="e329fee1-cb15-4bc7-8fdd-d4b4afc6d28b" style="Column header" x="22" y="1" width="197" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
