@@ -1,9 +1,6 @@
 **/target/
 /target/
 */target/*
-.classpath
-.project
-.settings
 
 # Package Files #
 *.war
